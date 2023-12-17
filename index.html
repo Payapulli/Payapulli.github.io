@@ -15,22 +15,21 @@
             margin: auto;
             overflow: hidden;
         }
-        .header,
-        .footer {
+        .header, .footer {
             background: #333;
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
         }
-        .project {
+        .project, .data-science-projects {
             background: #ffffff;
             padding: 15px;
             margin-bottom: 10px;
         }
-        .project img {
+        .project img, .data-science-projects img {
             max-width: 100%;
         }
-        .project h3 {
+        .project h3, .data-science-projects h3 {
             margin-top: 0;
         }
     </style>
@@ -43,19 +42,33 @@
     </header>
 
     <div class="container">
-        <!-- Project 1 -->
-        <div class="project">
-            <img src="path_to_your_project_image.jpg" alt="Project Image">
-            <h3>Project Title</h3>
-            <p>Short description of your project. Explain what the project does and the technologies or techniques you used.</p>
-            <p><a href="https://github.com/Payapulli/Golden-Shoe">View Project</a></p>
-        </div>
+        <!-- Data Science Projects Section -->
+        <section class="data-science-projects">
+            <h2>Data Science Projects</h2>
+            <!-- Project 1 -->
+            <div class="project">
+                <h3>Vertebral Column Data Set Analysis</h3>
+                <p> This Biomedical data set was built by Dr. Henrique da Mota during a medical residence
+                    period in Lyon, France. Each patient in the data set is represented in the data set
+                    by six biomechanical attributes derived from the shape and orientation of the pelvis
+                    and lumbar spine. You can find this dataset at https://archive.ics.uci.edu/ml/datasets/Vertebral+Column/</p>
+                <p> A significant part of the project was dedicated to classification using KNN, where various 
+                    metrics like Euclidean, Minkowski, Manhattan, and Chebyshev distances were explored. 
+                    I also implemented weighted decision-making in KNN and analyzed different training sizes to observe the learning curve.</p>
+                <p>Key techniques: Data Preprocessing, Exploratory Data Analysis, KNN Classification, Distance Metrics Analysis.</p>
+                <p><a href="https://github.com/DSCI-552/homework-1-Payapulli">View Project on GitHub</a></p>
+            </div>
+            
+            <!-- Add more projects here -->
+        </section>
+
+        <!-- Other Projects Section -->
         <!-- You can duplicate the above div to add more projects -->
     </div>
 
     <footer class="footer">
         <div class="container">
-            <p>Your Portfolio &copy; 2023</p>
+            <p>Joshua Payapulli's Portfolio &copy; 2023</p>
         </div>
     </footer>
 </body>
