@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "KNN: Vertebral Column Data Set Analysis",
-        "excerpt":"This project analyzes a biomedical data set from Dr. Henrique da Mota, which includes biomechanical features from patients’ spinal and pelvic parameters… to distinguish between normal and abnormal conditions. It involves exploratory data analysis with visualizations like scatterplots and boxplots to understand the data’s distribution. A key part of the...","categories": ["Data Science"],
+        "excerpt":"This project involves a comprehensive analysis of the Vertebral Column Data Set created by Dr. Henrique da Mota. The data set includes six biomechanical attributes from each patient, focusing on binary classification of Normal (NO) and Abnormal (AB) conditions… Dataset Overview The dataset is explored through scatterplots and boxplots to...","categories": ["Data Science"],
         "tags": [],
         "url": "/data%20science/vertebral/",
         "teaser": null
