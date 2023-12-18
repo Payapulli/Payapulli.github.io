@@ -110,9 +110,9 @@ author:
   location         : "Los Angeles, CA"
   email            :
   links:
-    - label: "joshua.payapulli@gmail.com"
+    - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "joshua.payapulli@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"

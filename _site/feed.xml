@@ -1,1 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-18T01:25:58-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html"></title><link href="http://localhost:4000/aboutme/" rel="alternate" type="text/html" title="" /><published>2023-03-15T00:00:00-07:00</published><updated>2023-03-15T00:00:00-07:00</updated><id>http://localhost:4000/aboutme</id><content type="html" xml:base="http://localhost:4000/aboutme/"><![CDATA[<p>I am a first year Master’s Student studying Applied Data Science at The University of Southern California.</p>]]></content><author><name>Joshua Payapulli</name></author><summary type="html"><![CDATA[I am a first year Master’s Student studying Applied Data Science at The University of Southern California.]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-18T03:53:04-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html">Linear Regression, KNN Regression: Combined Cycle Power Plant Data</title><link href="http://localhost:4000/data%20science/ccpp/" rel="alternate" type="text/html" title="Linear Regression, KNN Regression: Combined Cycle Power Plant Data" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/ccpp</id><content type="html" xml:base="http://localhost:4000/data%20science/ccpp/"><![CDATA[<p>This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V).</p>
+
+<!--more-->
+
+<h2 id="project-overview">Project Overview</h2>
+<p>The project begins with downloading and exploring the dataset, examining the number of rows and columns, and understanding what they represent. This step includes making scatterplots of all variables and observing the relationships between independent and dependent variables.</p>
+
+<h2 id="data-analysis-and-insights">Data Analysis and Insights</h2>
+<p>Statistical analysis is conducted to find the mean, median, range, quartiles, and interquartile ranges of each variable. This is summarized in a comprehensive table for an easy overview of the data characteristics.</p>
+
+<h2 id="regression-models">Regression Models</h2>
+<p>The core of the project involves:</p>
+<ul>
+  <li>Developing simple linear regression models for each predictor and assessing their significance in predicting the plant’s output.</li>
+  <li>Constructing a multiple regression model using all predictors and identifying the most impactful ones.</li>
+  <li>A comparative study between univariate and multiple regression models is presented visually.</li>
+</ul>
+
+<h2 id="advanced-analysis">Advanced Analysis</h2>
+<p>The exploration extends to:</p>
+<ul>
+  <li>Examining nonlinear associations between predictors and response using polynomial regression models.</li>
+  <li>Investigating interactions between different predictors and their impact on the response.</li>
+  <li>A thorough analysis of these models is presented, including the training and testing Mean Squared Errors (MSEs).</li>
+</ul>
+
+<h2 id="knn-regression">KNN Regression</h2>
+<p>The project also includes KNN regression analysis, comparing both normalized and raw features to determine the best fit. The analysis of train and test errors provides valuable insights into the model’s performance.</p>
+
+<h2 id="comparative-study-and-conclusions">Comparative Study and Conclusions</h2>
+<p>The project concludes with a comparison between KNN Regression and the most effective linear regression model. This comparative analysis provides a deep understanding of different modeling approaches in predicting energy output in power plants.</p>
+
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
+<a href="https://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V).]]></summary></entry><entry><title type="html">KNN: Vertebral Column Data Set Analysis</title><link href="http://localhost:4000/data%20science/vertebral/" rel="alternate" type="text/html" title="KNN: Vertebral Column Data Set Analysis" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/vertebral</id><content type="html" xml:base="http://localhost:4000/data%20science/vertebral/"><![CDATA[<p>This project analyzes a biomedical data set from Dr. Henrique da Mota, which includes biomechanical features from patients’ spinal and pelvic parameters…</p>
+
+<!--more-->
+
+<p>to distinguish between normal and abnormal conditions. It involves exploratory data analysis with visualizations like scatterplots and boxplots to understand the data’s distribution. A key part of the project is the application of KNN (k-nearest neighbors) classification to predict conditions, optimizing the ‘k’ value through testing error rates and computing performance metrics like precision and F1-score. The study also explores the effects of training set size on model accuracy, introducing a learning curve and experimenting with different distance metrics to refine predictions.</p>
+
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
+<a href="https://archive.ics.uci.edu/dataset/212/vertebral+column">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project analyzes a biomedical data set from Dr. Henrique da Mota, which includes biomechanical features from patients’ spinal and pelvic parameters…]]></summary></entry></feed>

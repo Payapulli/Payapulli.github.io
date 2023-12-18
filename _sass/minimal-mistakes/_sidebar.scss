@@ -122,14 +122,13 @@
    ========================================================================== */
 
 .author__avatar {
-  display: table-cell;
+  border-radius: '50%';
   vertical-align: top;
   width: 150px;
   height: 150px;
 }
 
 .author__content {
-  display: table-cell;
   vertical-align: top;
   padding-left: 15px;
   padding-right: 25px;
