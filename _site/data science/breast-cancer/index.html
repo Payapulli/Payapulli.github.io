@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Logistic Regression: Human Activity/Gesture detction on time series data - Joshua Payapulli</title>
-<meta name="description" content="In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.">
+<!-- begin _includes/seo.html --><title>Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning - Joshua Payapulli</title>
+<meta name="description" content="This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using the Breast Cancer Wisconsin (Diagnostic) Data Set and the Banknote Authentication Data Set. The focus is on implementing various classification and clustering techniques, and comparing their effectiveness through a series of Monte-Carlo simulations.">
 
 
   <meta name="author" content="Joshua Payapulli">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Joshua Payapulli">
-<meta property="og:title" content="Logistic Regression: Human Activity/Gesture detction on time series data">
-<meta property="og:url" content="http://localhost:4000/data%20science/AReM/">
+<meta property="og:title" content="Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning">
+<meta property="og:url" content="http://localhost:4000/data%20science/breast-cancer/">
 
 
-  <meta property="og:description" content="In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.">
+  <meta property="og:description" content="This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using the Breast Cancer Wisconsin (Diagnostic) Data Set and the Banknote Authentication Data Set. The focus is on implementing various classification and clustering techniques, and comparing their effectiveness through a series of Monte-Carlo simulations.">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/data%20science/AReM/">
+<link rel="canonical" href="http://localhost:4000/data%20science/breast-cancer/">
 
 
 
@@ -266,8 +266,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Logistic Regression: Human Activity/Gesture detction on time series data">
-    <meta itemprop="description" content="In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.">
+    <meta itemprop="headline" content="Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning">
+    <meta itemprop="description" content="This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using the Breast Cancer Wisconsin (Diagnostic) Data Set and the Banknote Authentication Data Set. The focus is on implementing various classification and clustering techniques, and comparing their effectiveness through a series of Monte-Carlo simulations.">
     <meta itemprop="datePublished" content="2023-12-19T00:00:00-08:00">
     
 
@@ -275,7 +275,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/data%20science/AReM/" class="u-url" itemprop="url">Logistic Regression: Human Activity/Gesture detction on time series data
+            <a href="http://localhost:4000/data%20science/breast-cancer/" class="u-url" itemprop="url">Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning
 </a>
           </h1>
           
@@ -304,50 +304,57 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.</p>
+        <p>This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using the Breast Cancer Wisconsin (Diagnostic) Data Set and the Banknote Authentication Data Set. The focus is on implementing various classification and clustering techniques, and comparing their effectiveness through a series of Monte-Carlo simulations.</p>
 
-<p><img src="/assets/images/human-activity.jpeg" alt="Alt text for image" /></p>
+<p><img src="/assets/images/breast-cancer.png" alt="Alt text for image" /></p>
 
 <!--more-->
 
-<h3 id="data-preparation-and-segmentation">Data Preparation and Segmentation</h3>
+<h2 id="part-1-breast-cancer-wisconsin-diagnostic-data-set">Part 1: Breast Cancer Wisconsin (Diagnostic) Data Set</h2>
+<h3 id="data-preparation-and-analysis">Data Preparation and Analysis</h3>
 <ul>
-  <li><strong>Dataset Download</strong>: Acquiring the AReM dataset from its official source.</li>
-  <li><strong>Training and Test Split</strong>: Strategically dividing the dataset into training and test sets based on predefined criteria.</li>
+  <li><strong>Data Download</strong>: Retrieving the dataset and dividing it into a training set (70%) and a test set (30%).</li>
 </ul>
 
-<h3 id="feature-extraction">Feature Extraction</h3>
+<h3 id="supervised-learning-with-svm">Supervised Learning with SVM</h3>
 <ul>
-  <li><strong>Time-Domain Feature Research</strong>: Identifying various time-domain features commonly used in time series classification.</li>
-  <li><strong>Feature Extraction Process</strong>: Extracting key features like minimum, maximum, mean, median, standard deviation, first quartile, and third quartile from each time series.</li>
-  <li><strong>Normalization/Standardization</strong>: Considering the option to normalize or standardize these features.</li>
-  <li><strong>Statistical Analysis</strong>: Estimating the standard deviation of each feature and constructing a 90% bootstrap confidence interval.</li>
-  <li><strong>Feature Selection</strong>: Selecting the most significant time-domain features based on analysis.</li>
+  <li><strong>L1-Penalized SVM</strong>: Training an L1-penalized SVM and using 5-fold cross-validation for penalty parameter selection. Reporting average metrics and plotting the ROC for one of the runs.</li>
 </ul>
 
-<h3 id="binary-classification-using-logistic-regression">Binary Classification Using Logistic Regression</h3>
+<h3 id="semi-supervised-learning-self-training">Semi-Supervised Learning (Self-training)</h3>
 <ul>
-  <li><strong>Feature-based Visualization</strong>: Creating scatter plots of the selected features to distinguish between bending and other activities.</li>
-  <li><strong>Time Series Segmentation for Analysis</strong>: Breaking each time series into two or more segments and examining the impact on feature representation.</li>
-  <li><strong>Logistic Regression Modeling</strong>: Implementing logistic regression with various segmentations and feature sets, including p-value analysis for model parameters.</li>
-  <li><strong>Model Evaluation</strong>: Assessing the model through confusion matrices, ROC curves, AUC, and logistic regression parameter significance.</li>
+  <li><strong>Training with Partial Labels</strong>: Implementing a self-training approach with partially labeled data. Gradually adding unlabeled data to the training set based on their distance to the SVM decision boundary. Evaluating performance and reporting average metrics.</li>
 </ul>
 
-<h3 id="binary-classification-using-l1-penalized-logistic-regression">Binary Classification Using L1-penalized Logistic Regression</h3>
+<h3 id="unsupervised-learning-with-k-means">Unsupervised Learning with K-Means</h3>
 <ul>
-  <li><strong>Implementation of L1-penalized Logistic Regression</strong>: Utilizing L1 regularization in logistic regression and comparing it with variable selection using p-values.</li>
-  <li><strong>Model Comparison and Analysis</strong>: Evaluating the effectiveness and ease of implementation between L1-penalized and standard logistic regression.</li>
+  <li><strong>Cluster Analysis</strong>: Running k-means clustering on the dataset, assuming k=2. Analyzing cluster centers and predicting labels based on majority polling. Computing average accuracy, precision, recall, F1-score, AUC, and reporting the ROC and confusion matrix for one of the runs.</li>
 </ul>
 
-<h3 id="multiclass-classification">Multiclass Classification</h3>
+<h3 id="spectral-clustering">Spectral Clustering</h3>
 <ul>
-  <li><strong>L1-penalized Multinomial Regression</strong>: Implementing and testing an L1-penalized multinomial regression model for classifying all activities.</li>
-  <li><strong>Naïve Bayes Classification</strong>: Comparing Gaussian and Multinomial Naïve Bayes classifiers for multiclass classification.</li>
+  <li><strong>Kernel-based Clustering</strong>: Implementing spectral clustering with an RBF kernel. Comparing the balance of clusters with the original dataset and using the fit-predict method for classification.</li>
 </ul>
 
-<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
-<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
-<a href="https://archive.ics.uci.edu/dataset/366/activity+recognition+system+based+on+multisensor+data+fusion+arem">View Dataset</a></p>
+<h3 id="comparative-analysis">Comparative Analysis</h3>
+<ul>
+  <li><strong>Comparing Learning Approaches</strong>: Evaluating the performance differences between supervised, semi-supervised, and unsupervised learning methods.</li>
+</ul>
+
+<h2 id="part-2-active-learning-using-svms-on-banknote-authentication-data-set">Part 2: Active Learning Using SVMs on Banknote Authentication Data Set</h2>
+<h3 id="data-preparation-and-active-learning-simulation">Data Preparation and Active Learning Simulation</h3>
+<ul>
+  <li><strong>Dataset Splitting</strong>: Randomly selecting a test and training set.</li>
+  <li><strong>Passive Learning</strong>: Implementing passive learning by incrementally increasing the training set.</li>
+  <li><strong>Active Learning</strong>: Employing active learning by selectively adding data points closest to the SVM hyperplane.</li>
+</ul>
+
+<h3 id="monte-carlo-simulation-and-analysis">Monte Carlo Simulation and Analysis</h3>
+<ul>
+  <li><strong>Simulation and Learning Curve</strong>: Conducting a Monte Carlo simulation to average the test errors for both active and passive learning. Plotting the learning curve and drawing conclusions from the results.</li>
+</ul>
+
+<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>
 
         
       </section>
@@ -383,22 +390,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Logistic+Regression%3A+Human+Activity%2FGesture+detction+on+time+series+data%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAReM%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Exploring+Machine+Learning%3A+Supervised%2C+Semi-Supervised%2C+and+Unsupervised+Learning%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fbreast-cancer%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAReM%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fbreast-cancer%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAReM%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fbreast-cancer%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/data%20science/APS/" class="pagination--pager" title="Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques
+      <a href="/data%20science/MFCCs/" class="pagination--pager" title="Advanced Machine Learning: Multi-Class and Multi-Label Classification &amp; K-Means Clustering
 ">Previous</a>
     
     
-      <a href="/data%20science/MFCCs/" class="pagination--pager" title="Advanced Machine Learning: Multi-Class and Multi-Label Classification &amp; K-Means Clustering
+      <a href="/data%20science/crime/" class="pagination--pager" title="Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data
 ">Next</a>
     
   </nav>
@@ -501,45 +508,6 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/data%20science/breast-cancer/" rel="permalink">Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using th...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
         <a href="/data%20science/MFCCs/" rel="permalink">Advanced Machine Learning: Multi-Class and Multi-Label Classification &amp; K-Means Clustering
 </a>
       
@@ -566,6 +534,45 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">This project is a deep dive into advanced machine learning techniques using the Anuran Calls (MFCCs) Data Set. The focus is on multi-class and multi-label cl...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/AReM/" rel="permalink">Logistic Regression: Human Activity/Gesture detction on time series data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a W...</p>
   </article>
 </div>
 

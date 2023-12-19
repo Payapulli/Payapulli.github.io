@@ -1,11 +1,13 @@
 ---
-title: "KNN: Vertebral Column Data Set Analysis"
+title: "KNN: Vertebral Column Data Set"
 date: 2023-12-18
 categories:
   - Data Science
 ---
 
 This project involves a comprehensive analysis of the Vertebral Column Data Set created by Dr. Henrique da Mota. The data set includes six biomechanical attributes from each patient, focusing on binary classification of Normal (NO) and Abnormal (AB) conditions...
+
+![Alt text for image](/assets/images/vertebral-column.jpeg)
 
 <!--more-->
 

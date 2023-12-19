@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Logistic Regression: Human Activity/Gesture detction on time series data - Joshua Payapulli</title>
-<meta name="description" content="In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.">
+<!-- begin _includes/seo.html --><title>Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques - Joshua Payapulli</title>
+<meta name="description" content="This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.">
 
 
   <meta name="author" content="Joshua Payapulli">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Joshua Payapulli">
-<meta property="og:title" content="Logistic Regression: Human Activity/Gesture detction on time series data">
-<meta property="og:url" content="http://localhost:4000/data%20science/AReM/">
+<meta property="og:title" content="Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques">
+<meta property="og:url" content="http://localhost:4000/data%20science/APS/">
 
 
-  <meta property="og:description" content="In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.">
+  <meta property="og:description" content="This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/data%20science/AReM/">
+<link rel="canonical" href="http://localhost:4000/data%20science/APS/">
 
 
 
@@ -266,8 +266,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Logistic Regression: Human Activity/Gesture detction on time series data">
-    <meta itemprop="description" content="In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.">
+    <meta itemprop="headline" content="Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques">
+    <meta itemprop="description" content="This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.">
     <meta itemprop="datePublished" content="2023-12-19T00:00:00-08:00">
     
 
@@ -275,7 +275,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/data%20science/AReM/" class="u-url" itemprop="url">Logistic Regression: Human Activity/Gesture detction on time series data
+            <a href="http://localhost:4000/data%20science/APS/" class="u-url" itemprop="url">Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques
 </a>
           </h1>
           
@@ -304,50 +304,61 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.</p>
+        <p>This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.</p>
 
-<p><img src="/assets/images/human-activity.jpeg" alt="Alt text for image" /></p>
+<p><img src="/assets/images/scania-trucks.jpeg" alt="Alt text for image" /></p>
 
 <!--more-->
 
-<h3 id="data-preparation-and-segmentation">Data Preparation and Segmentation</h3>
+<h2 id="data-preparation-and-exploration">Data Preparation and Exploration</h2>
+<h3 id="dataset-acquisition-and-preprocessing">Dataset Acquisition and Preprocessing</h3>
 <ul>
-  <li><strong>Dataset Download</strong>: Acquiring the AReM dataset from its official source.</li>
-  <li><strong>Training and Test Split</strong>: Strategically dividing the dataset into training and test sets based on predefined criteria.</li>
+  <li><strong>Data Download</strong>: Retrieving the APS Failure data, comprising 60,000 rows with 171 columns.</li>
+  <li><strong>Handling Missing Values</strong>: Researching and applying techniques to manage significant missing values in the dataset.</li>
 </ul>
 
-<h3 id="feature-extraction">Feature Extraction</h3>
+<h3 id="feature-analysis">Feature Analysis</h3>
 <ul>
-  <li><strong>Time-Domain Feature Research</strong>: Identifying various time-domain features commonly used in time series classification.</li>
-  <li><strong>Feature Extraction Process</strong>: Extracting key features like minimum, maximum, mean, median, standard deviation, first quartile, and third quartile from each time series.</li>
-  <li><strong>Normalization/Standardization</strong>: Considering the option to normalize or standardize these features.</li>
-  <li><strong>Statistical Analysis</strong>: Estimating the standard deviation of each feature and constructing a 90% bootstrap confidence interval.</li>
-  <li><strong>Feature Selection</strong>: Selecting the most significant time-domain features based on analysis.</li>
+  <li><strong>Coefficient of Variation</strong>: Calculating the CV for each of the 170 features.</li>
+  <li><strong>Correlation Matrix</strong>: Creating a matrix to understand the interdependencies between features.</li>
+  <li><strong>Feature Visualization</strong>: Selecting a subset of features with the highest CV for scatter and box plot visualization, aiding in assessing feature significance.</li>
 </ul>
 
-<h3 id="binary-classification-using-logistic-regression">Binary Classification Using Logistic Regression</h3>
+<h3 id="imbalance-assessment">Imbalance Assessment</h3>
 <ul>
-  <li><strong>Feature-based Visualization</strong>: Creating scatter plots of the selected features to distinguish between bending and other activities.</li>
-  <li><strong>Time Series Segmentation for Analysis</strong>: Breaking each time series into two or more segments and examining the impact on feature representation.</li>
-  <li><strong>Logistic Regression Modeling</strong>: Implementing logistic regression with various segmentations and feature sets, including p-value analysis for model parameters.</li>
-  <li><strong>Model Evaluation</strong>: Assessing the model through confusion matrices, ROC curves, AUC, and logistic regression parameter significance.</li>
+  <li><strong>Data Balance Analysis</strong>: Determining the proportion of positive and negative instances to evaluate dataset balance.</li>
 </ul>
 
-<h3 id="binary-classification-using-l1-penalized-logistic-regression">Binary Classification Using L1-penalized Logistic Regression</h3>
+<h2 id="random-forest-classification">Random Forest Classification</h2>
+<h3 id="initial-model-training">Initial Model Training</h3>
 <ul>
-  <li><strong>Implementation of L1-penalized Logistic Regression</strong>: Utilizing L1 regularization in logistic regression and comparing it with variable selection using p-values.</li>
-  <li><strong>Model Comparison and Analysis</strong>: Evaluating the effectiveness and ease of implementation between L1-penalized and standard logistic regression.</li>
+  <li><strong>Model Training</strong>: Developing a random forest model without addressing class imbalance.</li>
+  <li><strong>Model Evaluation</strong>: Assessing the model using confusion matrix, ROC, AUC, and misclassification rates for both training and test sets. Calculating the Out of Bag error estimate and comparing it with the test error.</li>
 </ul>
 
-<h3 id="multiclass-classification">Multiclass Classification</h3>
+<h3 id="addressing-class-imbalance">Addressing Class Imbalance</h3>
 <ul>
-  <li><strong>L1-penalized Multinomial Regression</strong>: Implementing and testing an L1-penalized multinomial regression model for classifying all activities.</li>
-  <li><strong>Naïve Bayes Classification</strong>: Comparing Gaussian and Multinomial Naïve Bayes classifiers for multiclass classification.</li>
+  <li><strong>Research on Imbalance Handling</strong>: Investigating how class imbalance is managed in random forests.</li>
+  <li><strong>Imbalance Compensation</strong>: Re-training the random forest with class imbalance compensation and comparing the results to the initial model.</li>
+</ul>
+
+<h2 id="advanced-tree-based-techniques">Advanced Tree-Based Techniques</h2>
+<h3 id="xgboost-and-model-trees">XGBoost and Model Trees</h3>
+<ul>
+  <li><strong>Model Tree Training</strong>: Implementing an XGBoost model tree, using L1-penalized logistic regression at each node.</li>
+  <li><strong>Error Estimation</strong>: Employing different cross-validation methods (5-fold, 10-fold, and leave-one-out) to estimate model error and comparing it with test error.</li>
+  <li><strong>Model Metrics</strong>: Reporting the Confusion Matrix, ROC, and AUC for both training and test sets.</li>
+</ul>
+
+<h3 id="smote-for-class-imbalance">SMOTE for Class Imbalance</h3>
+<ul>
+  <li><strong>SMOTE Preprocessing</strong>: Applying Synthetic Minority Over-sampling Technique (SMOTE) to address class imbalance.</li>
+  <li><strong>Model Re-training</strong>: Training the XGBoost model with L1-penalized logistic regression on the pre-processed data and repeating the error estimation and comparison.</li>
 </ul>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
 <a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
-<a href="https://archive.ics.uci.edu/dataset/366/activity+recognition+system+based+on+multisensor+data+fusion+arem">View Dataset</a></p>
+<a href="https://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant">View Dataset</a></p>
 
         
       </section>
@@ -383,22 +394,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Logistic+Regression%3A+Human+Activity%2FGesture+detction+on+time+series+data%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAReM%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Tree-Based+Methods%3A+Analyzing+APS+Failure+Data+with+Advanced+Machine+Learning+Techniques%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAPS%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAReM%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAPS%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAReM%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2FAPS%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/data%20science/APS/" class="pagination--pager" title="Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques
+      <a href="/data%20science/vertebral/" class="pagination--pager" title="KNN: Vertebral Column Data Set
 ">Previous</a>
     
     
-      <a href="/data%20science/MFCCs/" class="pagination--pager" title="Advanced Machine Learning: Multi-Class and Multi-Label Classification &amp; K-Means Clustering
+      <a href="/data%20science/AReM/" class="pagination--pager" title="Logistic Regression: Human Activity/Gesture detction on time series data
 ">Next</a>
     
   </nav>

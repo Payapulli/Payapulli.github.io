@@ -1,45 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-19T00:56:03-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html">Logistic Regression: Human Activity/Gesture detction on time series data</title><link href="http://localhost:4000/data%20science/AReM/" rel="alternate" type="text/html" title="Logistic Regression: Human Activity/Gesture detction on time series data" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/AReM</id><content type="html" xml:base="http://localhost:4000/data%20science/AReM/"><![CDATA[<p>In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-19T05:56:01-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html">Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data</title><link href="http://localhost:4000/data%20science/crime/" rel="alternate" type="text/html" title="Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/crime</id><content type="html" xml:base="http://localhost:4000/data%20science/crime/"><![CDATA[<p>In this project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.</p>
 
-<!--more-->
-
-<h3 id="data-preparation-and-segmentation">Data Preparation and Segmentation</h3>
-<ul>
-  <li><strong>Dataset Download</strong>: Acquiring the AReM dataset from its official source.</li>
-  <li><strong>Training and Test Split</strong>: Strategically dividing the dataset into training and test sets based on predefined criteria.</li>
-</ul>
-
-<h3 id="feature-extraction">Feature Extraction</h3>
-<ul>
-  <li><strong>Time-Domain Feature Research</strong>: Identifying various time-domain features commonly used in time series classification.</li>
-  <li><strong>Feature Extraction Process</strong>: Extracting key features like minimum, maximum, mean, median, standard deviation, first quartile, and third quartile from each time series.</li>
-  <li><strong>Normalization/Standardization</strong>: Considering the option to normalize or standardize these features.</li>
-  <li><strong>Statistical Analysis</strong>: Estimating the standard deviation of each feature and constructing a 90% bootstrap confidence interval.</li>
-  <li><strong>Feature Selection</strong>: Selecting the most significant time-domain features based on analysis.</li>
-</ul>
-
-<h3 id="binary-classification-using-logistic-regression">Binary Classification Using Logistic Regression</h3>
-<ul>
-  <li><strong>Feature-based Visualization</strong>: Creating scatter plots of the selected features to distinguish between bending and other activities.</li>
-  <li><strong>Time Series Segmentation for Analysis</strong>: Breaking each time series into two or more segments and examining the impact on feature representation.</li>
-  <li><strong>Logistic Regression Modeling</strong>: Implementing logistic regression with various segmentations and feature sets, including p-value analysis for model parameters.</li>
-  <li><strong>Model Evaluation</strong>: Assessing the model through confusion matrices, ROC curves, AUC, and logistic regression parameter significance.</li>
-</ul>
-
-<h3 id="binary-classification-using-l1-penalized-logistic-regression">Binary Classification Using L1-penalized Logistic Regression</h3>
-<ul>
-  <li><strong>Implementation of L1-penalized Logistic Regression</strong>: Utilizing L1 regularization in logistic regression and comparing it with variable selection using p-values.</li>
-  <li><strong>Model Comparison and Analysis</strong>: Evaluating the effectiveness and ease of implementation between L1-penalized and standard logistic regression.</li>
-</ul>
-
-<h3 id="multiclass-classification">Multiclass Classification</h3>
-<ul>
-  <li><strong>L1-penalized Multinomial Regression</strong>: Implementing and testing an L1-penalized multinomial regression model for classifying all activities.</li>
-  <li><strong>Naïve Bayes Classification</strong>: Comparing Gaussian and Multinomial Naïve Bayes classifiers for multiclass classification.</li>
-</ul>
-
-<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
-<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
-<a href="https://archive.ics.uci.edu/dataset/366/activity+recognition+system+based+on+multisensor+data+fusion+arem">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.]]></summary></entry><entry><title type="html">Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data</title><link href="http://localhost:4000/data%20science/crime/" rel="alternate" type="text/html" title="Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/crime</id><content type="html" xml:base="http://localhost:4000/data%20science/crime/"><![CDATA[<p>In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.</p>
+<p><img src="/assets/images/crime-data.png" alt="Alt text for image" /></p>
 
 <!--more-->
 
@@ -84,7 +45,252 @@
   <li><strong>L1 Penalized Gradient Boosting Tree</strong>: Utilizing XGBoost to fit an L1 penalized gradient boosting tree, determining α through cross-validation.</li>
 </ul>
 
-<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.]]></summary></entry><entry><title type="html">Linear Regression, KNN Regression: Combined Cycle Power Plant Data</title><link href="http://localhost:4000/data%20science/ccpp/" rel="alternate" type="text/html" title="Linear Regression, KNN Regression: Combined Cycle Power Plant Data" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/ccpp</id><content type="html" xml:base="http://localhost:4000/data%20science/ccpp/"><![CDATA[<p>This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V)…</p>
+<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[In this project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.]]></summary></entry><entry><title type="html">Logistic Regression: Human Activity/Gesture detction on time series data</title><link href="http://localhost:4000/data%20science/AReM/" rel="alternate" type="text/html" title="Logistic Regression: Human Activity/Gesture detction on time series data" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/AReM</id><content type="html" xml:base="http://localhost:4000/data%20science/AReM/"><![CDATA[<p>In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.</p>
+
+<p><img src="/assets/images/human-activity.jpeg" alt="Alt text for image" /></p>
+
+<!--more-->
+
+<h3 id="data-preparation-and-segmentation">Data Preparation and Segmentation</h3>
+<ul>
+  <li><strong>Dataset Download</strong>: Acquiring the AReM dataset from its official source.</li>
+  <li><strong>Training and Test Split</strong>: Strategically dividing the dataset into training and test sets based on predefined criteria.</li>
+</ul>
+
+<h3 id="feature-extraction">Feature Extraction</h3>
+<ul>
+  <li><strong>Time-Domain Feature Research</strong>: Identifying various time-domain features commonly used in time series classification.</li>
+  <li><strong>Feature Extraction Process</strong>: Extracting key features like minimum, maximum, mean, median, standard deviation, first quartile, and third quartile from each time series.</li>
+  <li><strong>Normalization/Standardization</strong>: Considering the option to normalize or standardize these features.</li>
+  <li><strong>Statistical Analysis</strong>: Estimating the standard deviation of each feature and constructing a 90% bootstrap confidence interval.</li>
+  <li><strong>Feature Selection</strong>: Selecting the most significant time-domain features based on analysis.</li>
+</ul>
+
+<h3 id="binary-classification-using-logistic-regression">Binary Classification Using Logistic Regression</h3>
+<ul>
+  <li><strong>Feature-based Visualization</strong>: Creating scatter plots of the selected features to distinguish between bending and other activities.</li>
+  <li><strong>Time Series Segmentation for Analysis</strong>: Breaking each time series into two or more segments and examining the impact on feature representation.</li>
+  <li><strong>Logistic Regression Modeling</strong>: Implementing logistic regression with various segmentations and feature sets, including p-value analysis for model parameters.</li>
+  <li><strong>Model Evaluation</strong>: Assessing the model through confusion matrices, ROC curves, AUC, and logistic regression parameter significance.</li>
+</ul>
+
+<h3 id="binary-classification-using-l1-penalized-logistic-regression">Binary Classification Using L1-penalized Logistic Regression</h3>
+<ul>
+  <li><strong>Implementation of L1-penalized Logistic Regression</strong>: Utilizing L1 regularization in logistic regression and comparing it with variable selection using p-values.</li>
+  <li><strong>Model Comparison and Analysis</strong>: Evaluating the effectiveness and ease of implementation between L1-penalized and standard logistic regression.</li>
+</ul>
+
+<h3 id="multiclass-classification">Multiclass Classification</h3>
+<ul>
+  <li><strong>L1-penalized Multinomial Regression</strong>: Implementing and testing an L1-penalized multinomial regression model for classifying all activities.</li>
+  <li><strong>Naïve Bayes Classification</strong>: Comparing Gaussian and Multinomial Naïve Bayes classifiers for multiclass classification.</li>
+</ul>
+
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
+<a href="https://archive.ics.uci.edu/dataset/366/activity+recognition+system+based+on+multisensor+data+fusion+arem">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.]]></summary></entry><entry><title type="html">Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques</title><link href="http://localhost:4000/data%20science/APS/" rel="alternate" type="text/html" title="Tree-Based Methods: Analyzing APS Failure Data with Advanced Machine Learning Techniques" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/APS</id><content type="html" xml:base="http://localhost:4000/data%20science/APS/"><![CDATA[<p>This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.</p>
+
+<p><img src="/assets/images/scania-trucks.jpeg" alt="Alt text for image" /></p>
+
+<!--more-->
+
+<h2 id="data-preparation-and-exploration">Data Preparation and Exploration</h2>
+<h3 id="dataset-acquisition-and-preprocessing">Dataset Acquisition and Preprocessing</h3>
+<ul>
+  <li><strong>Data Download</strong>: Retrieving the APS Failure data, comprising 60,000 rows with 171 columns.</li>
+  <li><strong>Handling Missing Values</strong>: Researching and applying techniques to manage significant missing values in the dataset.</li>
+</ul>
+
+<h3 id="feature-analysis">Feature Analysis</h3>
+<ul>
+  <li><strong>Coefficient of Variation</strong>: Calculating the CV for each of the 170 features.</li>
+  <li><strong>Correlation Matrix</strong>: Creating a matrix to understand the interdependencies between features.</li>
+  <li><strong>Feature Visualization</strong>: Selecting a subset of features with the highest CV for scatter and box plot visualization, aiding in assessing feature significance.</li>
+</ul>
+
+<h3 id="imbalance-assessment">Imbalance Assessment</h3>
+<ul>
+  <li><strong>Data Balance Analysis</strong>: Determining the proportion of positive and negative instances to evaluate dataset balance.</li>
+</ul>
+
+<h2 id="random-forest-classification">Random Forest Classification</h2>
+<h3 id="initial-model-training">Initial Model Training</h3>
+<ul>
+  <li><strong>Model Training</strong>: Developing a random forest model without addressing class imbalance.</li>
+  <li><strong>Model Evaluation</strong>: Assessing the model using confusion matrix, ROC, AUC, and misclassification rates for both training and test sets. Calculating the Out of Bag error estimate and comparing it with the test error.</li>
+</ul>
+
+<h3 id="addressing-class-imbalance">Addressing Class Imbalance</h3>
+<ul>
+  <li><strong>Research on Imbalance Handling</strong>: Investigating how class imbalance is managed in random forests.</li>
+  <li><strong>Imbalance Compensation</strong>: Re-training the random forest with class imbalance compensation and comparing the results to the initial model.</li>
+</ul>
+
+<h2 id="advanced-tree-based-techniques">Advanced Tree-Based Techniques</h2>
+<h3 id="xgboost-and-model-trees">XGBoost and Model Trees</h3>
+<ul>
+  <li><strong>Model Tree Training</strong>: Implementing an XGBoost model tree, using L1-penalized logistic regression at each node.</li>
+  <li><strong>Error Estimation</strong>: Employing different cross-validation methods (5-fold, 10-fold, and leave-one-out) to estimate model error and comparing it with test error.</li>
+  <li><strong>Model Metrics</strong>: Reporting the Confusion Matrix, ROC, and AUC for both training and test sets.</li>
+</ul>
+
+<h3 id="smote-for-class-imbalance">SMOTE for Class Imbalance</h3>
+<ul>
+  <li><strong>SMOTE Preprocessing</strong>: Applying Synthetic Minority Over-sampling Technique (SMOTE) to address class imbalance.</li>
+  <li><strong>Model Re-training</strong>: Training the XGBoost model with L1-penalized logistic regression on the pre-processed data and repeating the error estimation and comparison.</li>
+</ul>
+
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
+<a href="https://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.]]></summary></entry><entry><title type="html">Identification of Frost in Martian HiRISE Images Using Machine Learning</title><link href="http://localhost:4000/data%20science/mars/" rel="alternate" type="text/html" title="Identification of Frost in Martian HiRISE Images Using Machine Learning" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/mars</id><content type="html" xml:base="http://localhost:4000/data%20science/mars/"><![CDATA[<p>In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing various models including Convolutional Neural Networks (CNN) and transfer learning with pre-trained networks.</p>
+
+<p><img src="/assets/images/mars-frost.jpeg" alt="Alt text for image" /></p>
+
+<!--more-->
+
+<h2 id="data-exploration-and-pre-processing">Data Exploration and Pre-processing</h2>
+<h3 id="dataset-overview">Dataset Overview</h3>
+<ul>
+  <li><strong>Data Retrieval</strong>: Downloading the Anuran Calls dataset, which consists of 214 subframes and a total of 119920 tiles, each labeled as ‘frost’ or ‘background.’</li>
+</ul>
+
+<h3 id="data-organization-and-preparation">Data Organization and Preparation</h3>
+<ul>
+  <li><strong>Data Splitting</strong>: Utilizing provided files to divide the dataset into training, testing, and validation sets.</li>
+  <li><strong>Image Processing</strong>: Implementing image augmentation techniques like cropping, zooming, rotating, and translating to enhance the dataset’s diversity.</li>
+</ul>
+
+<h2 id="training-cnn--mlp">Training CNN + MLP</h2>
+<h3 id="model-architecture-and-training">Model Architecture and Training</h3>
+<ul>
+  <li><strong>CNN Implementation</strong>: Building a three-layer CNN followed by a dense layer. Incorporating ReLU activations, softmax function, batch normalization, dropout (30%), L2 regularization, and ADAM optimizer.</li>
+  <li><strong>Training Process</strong>: Training the model for at least 20 epochs with early stopping based on validation set performance. Plotting training and validation errors vs. epochs.</li>
+</ul>
+
+<h3 id="model-evaluation">Model Evaluation</h3>
+<ul>
+  <li><strong>Performance Metrics</strong>: Reporting Precision, Recall, and F1 score for the CNN + MLP model.</li>
+</ul>
+
+<h2 id="transfer-learning-with-pre-trained-models">Transfer Learning with Pre-trained Models</h2>
+<h3 id="implementing-transfer-learning">Implementing Transfer Learning</h3>
+<ul>
+  <li><strong>Pre-trained Models</strong>: Using EfficientNetB0, ResNet50, and VGG16 as feature extractors. Training only the last fully connected layer while freezing earlier layers.</li>
+  <li><strong>Model Training</strong>: Repeating image augmentation processes and training each model for at least 10 (preferably 20) epochs. Implementing early stopping and plotting errors vs. epochs.</li>
+</ul>
+
+<h3 id="model-evaluation-1">Model Evaluation</h3>
+<ul>
+  <li><strong>Performance Metrics</strong>: Reporting Precision, Recall, and F1 score for each transfer learning model.</li>
+</ul>
+
+<h3 id="comparative-analysis">Comparative Analysis</h3>
+<ul>
+  <li><strong>Model Comparison</strong>: Comparing the results of the transfer learning models with the CNN + MLP model and providing explanations for observed performances.</li>
+</ul>
+
+<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing various models including Convolutional Neural Networks (CNN) and transfer learning with pre-trained networks.]]></summary></entry><entry><title type="html">Advanced Machine Learning: Multi-Class and Multi-Label Classification &amp;amp; K-Means Clustering</title><link href="http://localhost:4000/data%20science/MFCCs/" rel="alternate" type="text/html" title="Advanced Machine Learning: Multi-Class and Multi-Label Classification &amp;amp; K-Means Clustering" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/MFCCs</id><content type="html" xml:base="http://localhost:4000/data%20science/MFCCs/"><![CDATA[<p>This project is a deep dive into advanced machine learning techniques using the Anuran Calls (MFCCs) Data Set. The focus is on multi-class and multi-label classification using Support Vector Machines (SVMs) and exploring K-Means clustering for a multi-class, multi-label dataset.</p>
+
+<p><img src="/assets/images/anuran-calls.jpeg" alt="Alt text for image" /></p>
+
+<!--more-->
+
+<h2 id="part-1-multi-class-and-multi-label-classification-using-svms">Part 1: Multi-Class and Multi-Label Classification Using SVMs</h2>
+<h3 id="data-preparation-and-setup">Data Preparation and Setup</h3>
+<ul>
+  <li><strong>Data Download</strong>: Fetching the Anuran Calls dataset and splitting it into a 70% training set.</li>
+  <li><strong>Problem Understanding</strong>: Each instance has three labels (Families, Genus, Species), presenting a multi-class and multi-label classification problem.</li>
+</ul>
+
+<h3 id="binary-relevance-approach">Binary Relevance Approach</h3>
+<ul>
+  <li><strong>Evaluation Metrics</strong>: Researching and applying exact match and hamming score/loss methods for evaluating the classifiers.</li>
+  <li><strong>Gaussian Kernel SVMs</strong>: Training a SVM for each label using Gaussian kernels and one-vs-all approach, optimizing SVM penalty and Gaussian kernel width via 10-fold cross-validation.</li>
+</ul>
+
+<h3 id="l1-penalized-svms">L1-Penalized SVMs</h3>
+<ul>
+  <li><strong>Implementation and Standardization</strong>: Implementing L1-penalized SVMs with standardized attributes, optimizing the SVM penalty using 10-fold cross-validation.</li>
+</ul>
+
+<h3 id="addressing-class-imbalance">Addressing Class Imbalance</h3>
+<ul>
+  <li><strong>Class Imbalance Remediation</strong>: Applying SMOTE to address class imbalance and repeating the L1-penalized SVM training.</li>
+  <li><strong>Comparative Analysis</strong>: Reporting conclusions about the classifiers’ performance.</li>
+</ul>
+
+<h3 id="additional-practices">Additional Practices</h3>
+<ul>
+  <li><strong>Classifier Chain Method</strong>: Studying and applying the Classifier Chain method to the classification problem.</li>
+  <li><strong>Multi-Label Metrics Analysis</strong>: Researching and computing confusion matrices, precision, recall, ROC, and AUC for the trained classifiers.</li>
+</ul>
+
+<h2 id="part-2-k-means-clustering-on-a-multi-class-and-multi-label-data-set">Part 2: K-Means Clustering on a Multi-Class and Multi-Label Data Set</h2>
+<h3 id="monte-carlo-simulation">Monte-Carlo Simulation</h3>
+<ul>
+  <li><strong>Clustering Execution</strong>: Performing K-means clustering on the entire dataset 50 times, choosing k automatically via CH, Gap Statistics, scree plots, Silhouettes, or another method.</li>
+  <li><strong>Majority Label Determination</strong>: Identifying the majority family, genus, and species in each cluster by reading the true labels.</li>
+</ul>
+
+<h3 id="hamming-distance-analysis">Hamming Distance Analysis</h3>
+<ul>
+  <li><strong>Label Triplet Assignment</strong>: Assigning a majority label triplet to each cluster.</li>
+  <li><strong>Distance Calculation</strong>: Computing the average Hamming distance, score, and loss between true labels and cluster-assigned labels, reporting the average and standard deviation of these metrics across 50 simulations.</li>
+</ul>
+
+<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project is a deep dive into advanced machine learning techniques using the Anuran Calls (MFCCs) Data Set. The focus is on multi-class and multi-label classification using Support Vector Machines (SVMs) and exploring K-Means clustering for a multi-class, multi-label dataset.]]></summary></entry><entry><title type="html">Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning</title><link href="http://localhost:4000/data%20science/breast-cancer/" rel="alternate" type="text/html" title="Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/breast-cancer</id><content type="html" xml:base="http://localhost:4000/data%20science/breast-cancer/"><![CDATA[<p>This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using the Breast Cancer Wisconsin (Diagnostic) Data Set and the Banknote Authentication Data Set. The focus is on implementing various classification and clustering techniques, and comparing their effectiveness through a series of Monte-Carlo simulations.</p>
+
+<p><img src="/assets/images/breast-cancer.png" alt="Alt text for image" /></p>
+
+<!--more-->
+
+<h2 id="part-1-breast-cancer-wisconsin-diagnostic-data-set">Part 1: Breast Cancer Wisconsin (Diagnostic) Data Set</h2>
+<h3 id="data-preparation-and-analysis">Data Preparation and Analysis</h3>
+<ul>
+  <li><strong>Data Download</strong>: Retrieving the dataset and dividing it into a training set (70%) and a test set (30%).</li>
+</ul>
+
+<h3 id="supervised-learning-with-svm">Supervised Learning with SVM</h3>
+<ul>
+  <li><strong>L1-Penalized SVM</strong>: Training an L1-penalized SVM and using 5-fold cross-validation for penalty parameter selection. Reporting average metrics and plotting the ROC for one of the runs.</li>
+</ul>
+
+<h3 id="semi-supervised-learning-self-training">Semi-Supervised Learning (Self-training)</h3>
+<ul>
+  <li><strong>Training with Partial Labels</strong>: Implementing a self-training approach with partially labeled data. Gradually adding unlabeled data to the training set based on their distance to the SVM decision boundary. Evaluating performance and reporting average metrics.</li>
+</ul>
+
+<h3 id="unsupervised-learning-with-k-means">Unsupervised Learning with K-Means</h3>
+<ul>
+  <li><strong>Cluster Analysis</strong>: Running k-means clustering on the dataset, assuming k=2. Analyzing cluster centers and predicting labels based on majority polling. Computing average accuracy, precision, recall, F1-score, AUC, and reporting the ROC and confusion matrix for one of the runs.</li>
+</ul>
+
+<h3 id="spectral-clustering">Spectral Clustering</h3>
+<ul>
+  <li><strong>Kernel-based Clustering</strong>: Implementing spectral clustering with an RBF kernel. Comparing the balance of clusters with the original dataset and using the fit-predict method for classification.</li>
+</ul>
+
+<h3 id="comparative-analysis">Comparative Analysis</h3>
+<ul>
+  <li><strong>Comparing Learning Approaches</strong>: Evaluating the performance differences between supervised, semi-supervised, and unsupervised learning methods.</li>
+</ul>
+
+<h2 id="part-2-active-learning-using-svms-on-banknote-authentication-data-set">Part 2: Active Learning Using SVMs on Banknote Authentication Data Set</h2>
+<h3 id="data-preparation-and-active-learning-simulation">Data Preparation and Active Learning Simulation</h3>
+<ul>
+  <li><strong>Dataset Splitting</strong>: Randomly selecting a test and training set.</li>
+  <li><strong>Passive Learning</strong>: Implementing passive learning by incrementally increasing the training set.</li>
+  <li><strong>Active Learning</strong>: Employing active learning by selectively adding data points closest to the SVM hyperplane.</li>
+</ul>
+
+<h3 id="monte-carlo-simulation-and-analysis">Monte Carlo Simulation and Analysis</h3>
+<ul>
+  <li><strong>Simulation and Learning Curve</strong>: Conducting a Monte Carlo simulation to average the test errors for both active and passive learning. Plotting the learning curve and drawing conclusions from the results.</li>
+</ul>
+
+<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using the Breast Cancer Wisconsin (Diagnostic) Data Set and the Banknote Authentication Data Set. The focus is on implementing various classification and clustering techniques, and comparing their effectiveness through a series of Monte-Carlo simulations.]]></summary></entry><entry><title type="html">Linear Regression, KNN Regression: Combined Cycle Power Plant Data</title><link href="http://localhost:4000/data%20science/ccpp/" rel="alternate" type="text/html" title="Linear Regression, KNN Regression: Combined Cycle Power Plant Data" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/ccpp</id><content type="html" xml:base="http://localhost:4000/data%20science/ccpp/"><![CDATA[<p>This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V)…</p>
+
+<p><img src="/assets/images/Combined-Cycle-Power-Plant.jpeg" alt="Alt text for image" /></p>
 
 <!--more-->
 
@@ -118,7 +324,9 @@
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
 <a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
-<a href="https://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V)…]]></summary></entry><entry><title type="html">KNN: Vertebral Column Data Set Analysis</title><link href="http://localhost:4000/data%20science/vertebral/" rel="alternate" type="text/html" title="KNN: Vertebral Column Data Set Analysis" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/vertebral</id><content type="html" xml:base="http://localhost:4000/data%20science/vertebral/"><![CDATA[<p>This project involves a comprehensive analysis of the Vertebral Column Data Set created by Dr. Henrique da Mota. The data set includes six biomechanical attributes from each patient, focusing on binary classification of Normal (NO) and Abnormal (AB) conditions…</p>
+<a href="https://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V)…]]></summary></entry><entry><title type="html">KNN: Vertebral Column Data Set</title><link href="http://localhost:4000/data%20science/vertebral/" rel="alternate" type="text/html" title="KNN: Vertebral Column Data Set" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/vertebral</id><content type="html" xml:base="http://localhost:4000/data%20science/vertebral/"><![CDATA[<p>This project involves a comprehensive analysis of the Vertebral Column Data Set created by Dr. Henrique da Mota. The data set includes six biomechanical attributes from each patient, focusing on binary classification of Normal (NO) and Abnormal (AB) conditions…</p>
+
+<p><img src="/assets/images/vertebral-column.jpeg" alt="Alt text for image" /></p>
 
 <!--more-->
 
