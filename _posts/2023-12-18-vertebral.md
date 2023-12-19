@@ -9,24 +9,23 @@ This project involves a comprehensive analysis of the Vertebral Column Data Set 
 
 <!--more-->
 
-## Dataset Overview
-The dataset is explored through scatterplots and boxplots to understand the relationships and distributions of the variables. A subset of the data is selected as the training and test sets, adhering to specified criteria.
+## Data Exploration
+The dataset is explored through scatterplots and boxplots to understand the relationships and distributions of the variables.
 
 ## KNN Classification
 The project's core is implementing K-Nearest Neighbors (KNN) with various metrics including Euclidean, Manhattan, and Chebyshev distances. Key points include:
-- Optimizing `k` value based on error rates.
+- Optimizing the value of `k` based on error rates.
 - Calculating metrics like confusion matrix, true positive and negative rates, precision, and F1-score.
-- Analyzing learning curves against different training set sizes.
+- Analyzing the learning curve against different training set sizes.
 
 ## Advanced Techniques
 Further exploration includes:
 - Testing different distance metrics and summarizing their performance.
-- Implementing weighted voting for improved decision making.
-- Evaluating nonlinear associations and interaction terms in regression models.
+- Implementing weighted voting to reduce variance and improve decision making.
 
 ## Conclusions and Findings
-The project concludes with insights into the best performing models, optimal `k` values, and the lowest training error rate achieved.
+We can see from our test errors using various distance metrics that the KNN model performs well on this dataset with a test error rate averaging at around 0.1.
 
-[View Jupyter Notebook](https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb) | 
+[View Jupyter Notebook](https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb) |
 [View Project on GitHub](URL_to_your_GitHub_repository) |
 [View Dataset](https://archive.ics.uci.edu/dataset/212/vertebral+column)

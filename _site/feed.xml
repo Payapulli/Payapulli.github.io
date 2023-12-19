@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-18T04:03:12-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html">Linear Regression, KNN Regression: Combined Cycle Power Plant Data</title><link href="http://localhost:4000/data%20science/ccpp/" rel="alternate" type="text/html" title="Linear Regression, KNN Regression: Combined Cycle Power Plant Data" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/ccpp</id><content type="html" xml:base="http://localhost:4000/data%20science/ccpp/"><![CDATA[<p>This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V)…</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-19T00:56:03-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html">Logistic Regression: Human Activity/Gesture detction on time series data</title><link href="http://localhost:4000/data%20science/AReM/" rel="alternate" type="text/html" title="Logistic Regression: Human Activity/Gesture detction on time series data" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/AReM</id><content type="html" xml:base="http://localhost:4000/data%20science/AReM/"><![CDATA[<p>In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.</p>
+
+<!--more-->
+
+<h3 id="data-preparation-and-segmentation">Data Preparation and Segmentation</h3>
+<ul>
+  <li><strong>Dataset Download</strong>: Acquiring the AReM dataset from its official source.</li>
+  <li><strong>Training and Test Split</strong>: Strategically dividing the dataset into training and test sets based on predefined criteria.</li>
+</ul>
+
+<h3 id="feature-extraction">Feature Extraction</h3>
+<ul>
+  <li><strong>Time-Domain Feature Research</strong>: Identifying various time-domain features commonly used in time series classification.</li>
+  <li><strong>Feature Extraction Process</strong>: Extracting key features like minimum, maximum, mean, median, standard deviation, first quartile, and third quartile from each time series.</li>
+  <li><strong>Normalization/Standardization</strong>: Considering the option to normalize or standardize these features.</li>
+  <li><strong>Statistical Analysis</strong>: Estimating the standard deviation of each feature and constructing a 90% bootstrap confidence interval.</li>
+  <li><strong>Feature Selection</strong>: Selecting the most significant time-domain features based on analysis.</li>
+</ul>
+
+<h3 id="binary-classification-using-logistic-regression">Binary Classification Using Logistic Regression</h3>
+<ul>
+  <li><strong>Feature-based Visualization</strong>: Creating scatter plots of the selected features to distinguish between bending and other activities.</li>
+  <li><strong>Time Series Segmentation for Analysis</strong>: Breaking each time series into two or more segments and examining the impact on feature representation.</li>
+  <li><strong>Logistic Regression Modeling</strong>: Implementing logistic regression with various segmentations and feature sets, including p-value analysis for model parameters.</li>
+  <li><strong>Model Evaluation</strong>: Assessing the model through confusion matrices, ROC curves, AUC, and logistic regression parameter significance.</li>
+</ul>
+
+<h3 id="binary-classification-using-l1-penalized-logistic-regression">Binary Classification Using L1-penalized Logistic Regression</h3>
+<ul>
+  <li><strong>Implementation of L1-penalized Logistic Regression</strong>: Utilizing L1 regularization in logistic regression and comparing it with variable selection using p-values.</li>
+  <li><strong>Model Comparison and Analysis</strong>: Evaluating the effectiveness and ease of implementation between L1-penalized and standard logistic regression.</li>
+</ul>
+
+<h3 id="multiclass-classification">Multiclass Classification</h3>
+<ul>
+  <li><strong>L1-penalized Multinomial Regression</strong>: Implementing and testing an L1-penalized multinomial regression model for classifying all activities.</li>
+  <li><strong>Naïve Bayes Classification</strong>: Comparing Gaussian and Multinomial Naïve Bayes classifiers for multiclass classification.</li>
+</ul>
+
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
+<a href="https://archive.ics.uci.edu/dataset/366/activity+recognition+system+based+on+multisensor+data+fusion+arem">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a Wireless Sensor Network, includes detailed recordings of seven different types of human activities. Each activity is captured through six time series, presenting a rich dataset for analysis. The project is divided into two main parts: Feature Creation/Extraction and Binary/Multiclass Classification.]]></summary></entry><entry><title type="html">Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data</title><link href="http://localhost:4000/data%20science/crime/" rel="alternate" type="text/html" title="Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/crime</id><content type="html" xml:base="http://localhost:4000/data%20science/crime/"><![CDATA[<p>In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.</p>
+
+<!--more-->
+
+<h2 id="decision-trees-as-interpretable-models">Decision Trees as Interpretable Models</h2>
+<h3 id="dataset-acquisition-and-tree-construction">Dataset Acquisition and Tree Construction</h3>
+<ul>
+  <li><strong>Data Download</strong>: Fetching the Acute Inflamations data from its official repository.</li>
+  <li><strong>Decision Tree Modeling</strong>: Building a decision tree on the entire dataset and visualizing it.</li>
+</ul>
+
+<h3 id="rule-extraction-and-pruning">Rule Extraction and Pruning</h3>
+<ul>
+  <li><strong>Rule Conversion</strong>: Translating the decision rules of the tree into a set of IF-THEN rules for better interpretability.</li>
+  <li><strong>Cost-Complexity Pruning</strong>: Implementing pruning techniques to find a minimal decision tree that maintains high interpretability.</li>
+</ul>
+
+<h2 id="the-lasso-and-boosting-for-regression">The LASSO and Boosting for Regression</h2>
+<h3 id="data-handling-and-analysis">Data Handling and Analysis</h3>
+<ul>
+  <li><strong>Data Retrieval</strong>: Downloading the Communities and Crime dataset.</li>
+  <li><strong>Data Preparation</strong>: Handling missing values and disregarding nonpredictive features.</li>
+  <li><strong>Correlation Matrix</strong>: Creating a correlation matrix to understand feature relationships.</li>
+  <li><strong>Coefficient of Variation Calculation</strong>: Computing the Coefficient of Variation (CV) for each feature.</li>
+</ul>
+
+<h3 id="feature-selection-and-visualization">Feature Selection and Visualization</h3>
+<ul>
+  <li><strong>Feature Shortlisting</strong>: Selecting a subset of features with the highest CV.</li>
+  <li><strong>Data Visualization</strong>: Generating scatter plots and box plots for the shortlisted features to assess their significance.</li>
+</ul>
+
+<h3 id="regression-models-and-evaluation">Regression Models and Evaluation</h3>
+<ul>
+  <li><strong>Linear Regression</strong>: Fitting a linear model using least squares and reporting the test error.</li>
+  <li><strong>Ridge Regression</strong>: Applying ridge regression with λ chosen by cross-validation and reporting the test error.</li>
+  <li><strong>LASSO Regression</strong>: Conducting LASSO regression with λ chosen by cross-validation and comparing the test error between models with standard and non-standardized features.</li>
+  <li><strong>PCR Model</strong>: Fitting a Principal Component Regression (PCR) model with the number of components chosen by cross-validation.</li>
+</ul>
+
+<h3 id="advanced-regression-with-boosting">Advanced Regression with Boosting</h3>
+<ul>
+  <li><strong>L1 Penalized Gradient Boosting Tree</strong>: Utilizing XGBoost to fit an L1 penalized gradient boosting tree, determining α through cross-validation.</li>
+</ul>
+
+<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.]]></summary></entry><entry><title type="html">Linear Regression, KNN Regression: Combined Cycle Power Plant Data</title><link href="http://localhost:4000/data%20science/ccpp/" rel="alternate" type="text/html" title="Linear Regression, KNN Regression: Combined Cycle Power Plant Data" /><published>2023-12-18T00:00:00-08:00</published><updated>2023-12-18T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/ccpp</id><content type="html" xml:base="http://localhost:4000/data%20science/ccpp/"><![CDATA[<p>This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly electrical energy output (EP). The dataset features include hourly average ambient variables: Temperature (T), Ambient Pressure (AP), Relative Humidity (RH), and Exhaust Vacuum (V)…</p>
 
 <!--more-->
 
@@ -36,28 +122,27 @@
 
 <!--more-->
 
-<h2 id="dataset-overview">Dataset Overview</h2>
-<p>The dataset is explored through scatterplots and boxplots to understand the relationships and distributions of the variables. A subset of the data is selected as the training and test sets, adhering to specified criteria.</p>
+<h2 id="data-exploration">Data Exploration</h2>
+<p>The dataset is explored through scatterplots and boxplots to understand the relationships and distributions of the variables.</p>
 
 <h2 id="knn-classification">KNN Classification</h2>
 <p>The project’s core is implementing K-Nearest Neighbors (KNN) with various metrics including Euclidean, Manhattan, and Chebyshev distances. Key points include:</p>
 <ul>
-  <li>Optimizing <code class="language-plaintext highlighter-rouge">k</code> value based on error rates.</li>
+  <li>Optimizing the value of <code class="language-plaintext highlighter-rouge">k</code> based on error rates.</li>
   <li>Calculating metrics like confusion matrix, true positive and negative rates, precision, and F1-score.</li>
-  <li>Analyzing learning curves against different training set sizes.</li>
+  <li>Analyzing the learning curve against different training set sizes.</li>
 </ul>
 
 <h2 id="advanced-techniques">Advanced Techniques</h2>
 <p>Further exploration includes:</p>
 <ul>
   <li>Testing different distance metrics and summarizing their performance.</li>
-  <li>Implementing weighted voting for improved decision making.</li>
-  <li>Evaluating nonlinear associations and interaction terms in regression models.</li>
+  <li>Implementing weighted voting to reduce variance and improve decision making.</li>
 </ul>
 
 <h2 id="conclusions-and-findings">Conclusions and Findings</h2>
-<p>The project concludes with insights into the best performing models, optimal <code class="language-plaintext highlighter-rouge">k</code> values, and the lowest training error rate achieved.</p>
+<p>We can see from our test errors using various distance metrics that the KNN model performs well on this dataset with a test error rate averaging at around 0.1.</p>
 
-<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> |
 <a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
 <a href="https://archive.ics.uci.edu/dataset/212/vertebral+column">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project involves a comprehensive analysis of the Vertebral Column Data Set created by Dr. Henrique da Mota. The data set includes six biomechanical attributes from each patient, focusing on binary classification of Normal (NO) and Abnormal (AB) conditions…]]></summary></entry></feed>

@@ -1,0 +1,596 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data - Joshua Payapulli</title>
+<meta name="description" content="In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.">
+
+
+  <meta name="author" content="Joshua Payapulli">
+  
+  <meta property="article:author" content="Joshua Payapulli">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Joshua Payapulli">
+<meta property="og:title" content="Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data">
+<meta property="og:url" content="http://localhost:4000/data%20science/crime/">
+
+
+  <meta property="og:description" content="In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-12-19T00:00:00-08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/data%20science/crime/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Joshua Payapulli",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Joshua Payapulli Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Joshua Payapulli
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/data-science-projects/">Data Science Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/other-projects/">Other Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/profile-pic.jpeg" alt="Joshua Payapulli" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Joshua Payapulli</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Graduate Student</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Los Angeles, CA</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="joshua.payapulli@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/Payapulli" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/joshua-payapulli-890875190/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data">
+    <meta itemprop="description" content="In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.">
+    <meta itemprop="datePublished" content="2023-12-19T00:00:00-08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/data%20science/crime/" class="u-url" itemprop="url">Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>In this comprehensive project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inflammations dataset and the Communities and Crime dataset. The project is structured into two main sections, each focusing on different aspects of machine learning.</p>
+
+<!--more-->
+
+<h2 id="decision-trees-as-interpretable-models">Decision Trees as Interpretable Models</h2>
+<h3 id="dataset-acquisition-and-tree-construction">Dataset Acquisition and Tree Construction</h3>
+<ul>
+  <li><strong>Data Download</strong>: Fetching the Acute Inflamations data from its official repository.</li>
+  <li><strong>Decision Tree Modeling</strong>: Building a decision tree on the entire dataset and visualizing it.</li>
+</ul>
+
+<h3 id="rule-extraction-and-pruning">Rule Extraction and Pruning</h3>
+<ul>
+  <li><strong>Rule Conversion</strong>: Translating the decision rules of the tree into a set of IF-THEN rules for better interpretability.</li>
+  <li><strong>Cost-Complexity Pruning</strong>: Implementing pruning techniques to find a minimal decision tree that maintains high interpretability.</li>
+</ul>
+
+<h2 id="the-lasso-and-boosting-for-regression">The LASSO and Boosting for Regression</h2>
+<h3 id="data-handling-and-analysis">Data Handling and Analysis</h3>
+<ul>
+  <li><strong>Data Retrieval</strong>: Downloading the Communities and Crime dataset.</li>
+  <li><strong>Data Preparation</strong>: Handling missing values and disregarding nonpredictive features.</li>
+  <li><strong>Correlation Matrix</strong>: Creating a correlation matrix to understand feature relationships.</li>
+  <li><strong>Coefficient of Variation Calculation</strong>: Computing the Coefficient of Variation (CV) for each feature.</li>
+</ul>
+
+<h3 id="feature-selection-and-visualization">Feature Selection and Visualization</h3>
+<ul>
+  <li><strong>Feature Shortlisting</strong>: Selecting a subset of features with the highest CV.</li>
+  <li><strong>Data Visualization</strong>: Generating scatter plots and box plots for the shortlisted features to assess their significance.</li>
+</ul>
+
+<h3 id="regression-models-and-evaluation">Regression Models and Evaluation</h3>
+<ul>
+  <li><strong>Linear Regression</strong>: Fitting a linear model using least squares and reporting the test error.</li>
+  <li><strong>Ridge Regression</strong>: Applying ridge regression with λ chosen by cross-validation and reporting the test error.</li>
+  <li><strong>LASSO Regression</strong>: Conducting LASSO regression with λ chosen by cross-validation and comparing the test error between models with standard and non-standardized features.</li>
+  <li><strong>PCR Model</strong>: Fitting a Principal Component Regression (PCR) model with the number of components chosen by cross-validation.</li>
+</ul>
+
+<h3 id="advanced-regression-with-boosting">Advanced Regression with Boosting</h3>
+<ul>
+  <li><strong>L1 Penalized Gradient Boosting Tree</strong>: Utilizing XGBoost to fit an L1 penalized gradient boosting tree, determining α through cross-validation.</li>
+</ul>
+
+<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#data-science" class="page__taxonomy-item p-category" rel="tag">Data Science</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-12-19T00:00:00-08:00">December 19, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Boosting%2C+LASSO%3A+Decision+Trees+and+Advanced+Regression+Techniques+on+Crime+data%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fcrime%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fcrime%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fcrime%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/data%20science/AReM/" class="pagination--pager" title="Logistic Regression: Human Activity/Gesture detction on time series data
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/AReM/" rel="permalink">Logistic Regression: Human Activity/Gesture detction on time series data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a W...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/vertebral/" rel="permalink">KNN: Vertebral Column Data Set Analysis
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This project involves a comprehensive analysis of the Vertebral Column Data Set created by Dr. Henrique da Mota. The data set includes six biomechanical attr...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/ccpp/" rel="permalink">Linear Regression, KNN Regression: Combined Cycle Power Plant Data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This project delves into a detailed dataset from a Combined Cycle Power Plant over six years (2006-2011), where the main goal is to predict the net hourly el...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Joshua Payapulli. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
