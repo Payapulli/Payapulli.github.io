@@ -41,9 +41,15 @@ var store = [{
         "url": "/data%20science/crime/",
         "teaser": null
       },{
-        "title": "Identification of Frost in Martian HiRISE Images Using Machine Learning",
-        "excerpt":"In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing various models including Convolutional Neural Networks (CNN) and transfer learning with pre-trained networks. Data Exploration and Pre-processing...","categories": ["Data Science"],
+        "title": "Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images",
+        "excerpt":"In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing a Convolutional Neural Network + Multi-Layer Perceptron trained from scratch vs Transfer Learning with pre-trained networks (EfficientNetB0,...","categories": ["Data Science"],
         "tags": [],
         "url": "/data%20science/mars/",
+        "teaser": null
+      },{
+        "title": "How to get better at chess: analyzing 1000 of my chess games.",
+        "excerpt":"How Can Analyzing a History of Personal Chess Games Reveal General Trends, Strengths, and Weaknesses in Gameplay? This project embarks on an in-depth analysis of all chess games I have played over the past year. The objective is to unearth recurring themes and effective strategies, thereby elevating my game. Leveraging...","categories": ["Data Science"],
+        "tags": [],
+        "url": "/data%20science/chess/",
         "teaser": null
       }]

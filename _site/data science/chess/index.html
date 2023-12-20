@@ -1,0 +1,705 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to get better at chess: analyzing 1000 of my chess games. - Joshua Payapulli</title>
+<meta name="description" content="How Can Analyzing a History of Personal Chess Games Reveal General Trends, Strengths, and Weaknesses in Gameplay? This project embarks on an in-depth analysis of all chess games I have played over the past year. The objective is to unearth recurring themes and effective strategies, thereby elevating my game. Leveraging the data collected from 1000 of my games on Chess.com in the past year, this report seeks to extract practical insights, shaping my future tactics and approach in chess…">
+
+
+  <meta name="author" content="Joshua Payapulli">
+  
+  <meta property="article:author" content="Joshua Payapulli">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Joshua Payapulli">
+<meta property="og:title" content="How to get better at chess: analyzing 1000 of my chess games.">
+<meta property="og:url" content="http://localhost:4000/data%20science/chess/">
+
+
+  <meta property="og:description" content="How Can Analyzing a History of Personal Chess Games Reveal General Trends, Strengths, and Weaknesses in Gameplay? This project embarks on an in-depth analysis of all chess games I have played over the past year. The objective is to unearth recurring themes and effective strategies, thereby elevating my game. Leveraging the data collected from 1000 of my games on Chess.com in the past year, this report seeks to extract practical insights, shaping my future tactics and approach in chess…">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-12-19T00:00:00-08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/data%20science/chess/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Joshua Payapulli",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Joshua Payapulli Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Joshua Payapulli
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/data-science-projects/">Data Science Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/other-projects/">Other Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/profile-pic.jpeg" alt="Joshua Payapulli" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Joshua Payapulli</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Graduate Student</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Los Angeles, CA</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="joshua.payapulli@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/Payapulli" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/joshua-payapulli-890875190/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to get better at chess: analyzing 1000 of my chess games.">
+    <meta itemprop="description" content="How Can Analyzing a History of Personal Chess Games Reveal General Trends, Strengths, and Weaknesses in Gameplay? This project embarks on an in-depth analysis of all chess games I have played over the past year. The objective is to unearth recurring themes and effective strategies, thereby elevating my game. Leveraging the data collected from 1000 of my games on Chess.com in the past year, this report seeks to extract practical insights, shaping my future tactics and approach in chess…">
+    <meta itemprop="datePublished" content="2023-12-19T00:00:00-08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/data%20science/chess/" class="u-url" itemprop="url">How to get better at chess: analyzing 1000 of my chess games.
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>How Can Analyzing a History of Personal Chess Games Reveal General Trends, Strengths, and Weaknesses in Gameplay? This project embarks on an in-depth analysis of all chess games I have played over the past year. The objective is to unearth recurring themes and effective strategies, thereby elevating my game. Leveraging the data collected from 1000 of my games on Chess.com in the past year, this report seeks to extract practical insights, shaping my future tactics and approach in chess…</p>
+
+<p>Evaluating one’s games individually is common practice in chess. Nowadays players use chess engines such as Stockfish and AlphaZero to highlight errors in a particular game. The approach this project takes is different, in that we are leveraging the power of Stockfish to find high-level insights, and common trends that can give us insight into the strengths and weaknesses of one’s game.</p>
+
+<p><img src="/assets/images/chess/board.png" alt="Alt text for image" /></p>
+
+<!--more-->
+
+<h2 id="data-collection-and-cleaning">Data Collection and Cleaning:</h2>
+<ol>
+  <li>
+    <p>The core data for this project was sourced from Chess.com, a leading online chess platform. Using their public API, I fetched game data from the year, which included a wide array of information such as move sequences (PGNs), player ratings, game outcomes, and timestamps. This data did not require much cleaning, rather just filtering out unnecessary/irrelevant information.</p>
+  </li>
+  <li>
+    <p>I am doing web scraping on https://www.365chess.com/eco.php, to get a comprehensive list of all the names of chess openings based on their ECO abbreviation which is available from the Chess.com API. Using this, I am able to translate the ECO code from the Chess.com API into an understandable opening name. For example: A00 - Polish opening. Using this data did require quite a lot of cleaning, such as removing duplicate entries, removing unnecessary punctuation, quotation marks etc.</p>
+  </li>
+</ol>
+
+<h3 id="in-depth-analysis">In-depth Analysis</h3>
+<p>Let’s walk through the results of my analysis. A game of chess can be broken down into three distinctive parts; the opening, the middle game and the endgame. As such, I have followed this structure for my analysis of my previous chess games by also breaking it down into these three sections. We will find that analyzing each of these sections separately is conducive to producing distinct, actionable and illuminating insights into the strengths and weaknesses of my chess ability.</p>
+
+<p>We will be referring to the term ‘evaluation’ a lot in this report. This refers to the advantage at a given position on the chess board as determined by ‘Stockfish’ - an extremely powerful chess engine. An evaluation of 0 means there is no advantage for black or white, the position is completely tied. An evaluation of 10,000 means white has won, and an evaluation of -10,000 means black has won. For the purposes of this report, in my ‘run_analysis.py’ file, I am multiplying the black score by -1 so that we can aggregate scores across all my games for black and white and come out with meaningful results. If we did not do this, the games I win as black and the games I win as white would cancel each other out and result, and vice versa for the games I lose as white and the games I lose as black.</p>
+
+<h3 id="opening-middle-and-endgame-strongest-vs-weakest">Opening, middle and endgame. Strongest vs weakest.</h3>
+<p>The first question I set out to answer was to find out which part of my game required the most work. I classify the ‘opening’ as the first 20 moves, ‘middle’ as the moves between 20-40, and the ‘end’ as all moves past 40. This serves as a reasonable cutoff between the three sections of the game.</p>
+
+<p><img src="/assets/images/chess/game_phase_box_plot.jpg" alt="Alt text for image" /></p>
+
+<p>In the opening phase, the evaluations are tightly grouped around a median close to zero, indicating that initial positions are typically balanced, reflecting standard opening theory. As the game transitions into the middle game, there’s a noticeable increase in the range of evaluations, with a median that shifts slightly positive, suggesting that during this phase, there’s a greater potential for one side to secure an advantage. Finally, in the endgame, while the median hovers around zero similar to the opening, the evaluations vary widely, demonstrating the decisive nature of this phase with pronounced advantages or pitfalls often influenced by material imbalances or pawn promotion scenarios.
+At the grandmaster level, draws are commonplace, but the majority of the games I have played have resulted in either wins or losses. As such, we should expect the evaluation whether positive or negative to be fairly small in the opening, increase (become more positive or more negative) towards the middle game and then increase further in the endgame. So in conclusion, the average evaluation across these three sections do not immediately highlight any one part of my game that is stronger or weaker.
+So, overall this does not reveal anything too insightful about where my strengths and weaknesses lie. It is clear however, that I am far from the grandmaster level for whom we would expect the distributions for the middle and endgame to be much more tightly centered around zero, as draws are much more common at this level.</p>
+
+<h2 id="analyzing-my-opening-repertoire">Analyzing my opening repertoire.</h2>
+<p>The opening is often referred to by chess players as ‘theory’, as these opening positions have all been intensely studied, to find which paths are optimal for each player. Strong chess players memorize this opening theory, so they can increase their chances to start the game in an advantageous position. The different paths/positions that a chess player likes to play in the beginning is often referred to as their ‘opening repertoire’.</p>
+
+<p>The chess.com API provides access to the ‘ECO’ code which is a 3 character code to describe the opening that is played for a particular game. Using this data, and by scraping the translation table from https://www.365chess.com/eco.php to convert these ECO codes into their respective opening names I am able to produce the chart below, highlighting my 10 most frequently played openings.</p>
+
+<p><img src="/assets/images/chess/frequent_openings.jpg" alt="Alt text for image" /></p>
+
+<p>As we can see from the above chart, my most frequently played opening is the Caro-Kann defense and the Two knights defense.</p>
+
+<p><img src="/assets/images/chess/frequent_openings_eval.jpg" alt="Alt text for image" /></p>
+
+<p>In analyzing the average evaluations for the top 10 chess openings I frequently play, we can see some distinct trends that can inform my strategy. The Caro-Kann Defence, Pirc Defence and Old Indian defense tend to lead into less favorable positions on average, which may suggest a need to refine my approach or consider alternative openings when looking for a solid yet dynamic position.</p>
+
+<p>Conversely, the Two Knights Defence, Giuoco Piano and the Philidor’s Defence seem to grant me more advantageous positions, which aligns with my experiences of achieving strong, assertive postures early in the game when playing these openings.</p>
+
+<p>The Queen’s Pawn, and Italian game openings result in nearly balanced positions, indicating these are reliable choices for a solid game, though they may not confer significant early advantages. These openings are versatile and provide me with ample opportunities to outplay my opponent in the middlegame.</p>
+
+<p>Moderate positive evaluations for the Sicilian Defence, and the Scandinavian Defence suggest that these openings align well with my play style, often leading to slightly better positions that I can capitalize on as the game progresses.</p>
+
+<h3 id="average-evaluation-over-time">Average evaluation over time</h3>
+<p>The visualization below was produced by aggregating the evaluation metric across each of my most frequently played openings, and each move number. This chart is extremely useful as it allows us to see where my opening game diverts from the theory for which are the optimal moves to play at each position.</p>
+
+<p><img src="/assets/images/chess/avg_eval_by_move_no.jpg" alt="Alt text for image" /></p>
+
+<p>The detailed line graph demonstrates the fluctuations in average evaluation across the first 20 moves for my top 10 most commonly played openings. Each line represents a different opening, and the trend of these lines provides insight into how these openings fare in terms of gaining or conceding an advantage during the early game.</p>
+
+<p>Notably, the Philidor’s Defence, represented by the lime green line, shows a significant spike in evaluation after move 20, indicating a potential turning point where a substantial advantage was achieved. This suggests that when playing the Caro-Kann Defence, the positions I reach tend to be stable until a critical moment arises that decisively shifts the balance.</p>
+
+<p>Other openings, like the Two Knights Defence, show more volatility in their evaluations. This could reflect the tactical nature of these openings, where each move can greatly impact the game’s outcome. The Queen’s Pawn shows a more steady trend, implying a more strategic approach where the evaluation does not swing wildly.</p>
+
+<p>The convergence of lines around the zero mark until about move 10 suggests an even contest in the opening phase across different openings. However, as the game progresses, the diverging paths of the lines indicate that my understanding and execution in the middlegame could be the differentiator in outcomes.</p>
+
+<p>Overall a clear takeaway from this chart is my lack of understanding of the theory for my weaker openings, such as the Pirc Defence or the Italian game, really starts to become evident at around move 13. Therefore, I should try to focus on studying the theory past this point.</p>
+
+<p>Also, we can see that volatile/sharp openings like the Two Knights Defence seem to do well for me overall, so when learning new openings I should consider focusing my openings repertoire on playing sharp opening lines.</p>
+
+<h2 id="middle-game-blunder-analysis">Middle game: Blunder Analysis</h2>
+<p>As an intermediate player, one can make significant improvements in the middle game by reducing what is referred to as blunders. A blunder is defined by an error that allows your opponent to gain significant advantage in the game.</p>
+
+<p>I have categorized blunders into two different types, tactical and strategic. A tactical blunder is where there has been significant loss in material, such as losing a rook or queen, with no compensation. A strategic blunder however is a bit more subtle, and refers to mainly positional errors. For example, moving your pawns in front of your bishop, blocking it off, putting a knight on the edge of the board, or having a ‘backwards’ pawn.</p>
+
+<p>The way I differentiate between these two types of blunders is by comparing the drop in evaluation with the loss in material. If the evaluation has dropped further than 1000 centipawns, it is considered a blunder. Furthermore, if the material loss was greater than 3, (a pawn is worth 1, bishop is worth 3 etc.) then this blunder is categorized as tactical. Otherwise, we consider it a strategic blunder.</p>
+
+<p><img src="/assets/images/chess/blunder_type_dist.jpg" alt="Alt text for image" /></p>
+
+<p>The pie chart presented reveals a distribution of blunder types that I’ve made during the middle game phase of my chess matches. A significant majority, accounting for 77.1%, are classified as strategic blunders. These are errors that pertain to plans and long-term positional understanding, indicating that I might need to strengthen my overall game strategy, positional play, and perhaps reassess some of the middle-game plans I commonly employ.</p>
+
+<p>On the other hand, tactical blunders, which involve direct calculation mistakes such as missing forks, pins, or discoveries, constitute a smaller portion, at 22.9%. While fewer in number, these mistakes are often the most immediately punishing, as they can directly lead to loss of material or other concrete disadvantages. This probably is due to the fact that I am an intermediate player, where we would expect a beginner to make mostly tactical errors. As such, to improve my play, it would be advisable to focus on studying strategic elements such as pawn structures, space control, and piece coordination.</p>
+
+<h3 id="board-heatmap">Board Heatmap</h3>
+<p>In the analysis process, each game was processed move by move. A heatmap matrix – an 8x8 array representing the chessboard – was updated for every piece on each square after every move. This tracking was facilitated by the update_board_heatmap function, which incremented matrix cells corresponding to the occupied squares.</p>
+
+<p>The visualization of the heatmap illustrates the frequency of piece occupation on the board. The color intensity in each square correlates with the level of activity, providing a clear indication of the most and least frequented squares.</p>
+
+<p><img src="/assets/images/chess/board_heatmap.jpg" alt="Alt text for image" /></p>
+
+<p>My strategic emphasis on central control is evident, as the squares d4, e4, d5, and e5 exhibit a lot of activity. This is reflective of my gameplay style, which prioritizes dominating the center to facilitate tactical plays and improve piece mobility. The
+heatmap validates my focus on these central squares and supports the fundamental chess principle that central control is crucial for successful gameplay.</p>
+
+<p>The peripheral files, particularly the a and h files, show less activity, which is consistent with the general progression of a chess game where the flanks are less critical in the opening and middle phases. However, the increased activity in the corner squares suggests my consistent approach to rook mobilization and king safety, indicating a propensity for castling and rook lifts as part of my overall strategy.</p>
+
+<p>Reflecting on this heatmap, it’s clear that my play style is centered around control and piece development, with a balanced yet assertive approach to the opening and middle game. Again, this is indicative of my progression as a player past the beginner level where these fundamental concepts are less ingrained in the player’s mind but also not at an advanced level where unorthodox strategies that may violate these principles are employed.</p>
+
+<h3 id="strongest-and-weakest-endgames">Strongest and weakest endgames</h3>
+<p>Similar to the opening, the amount of variability involved at the endgame is greatly reduced relative to the middle game. As such, there is again, well traversed theory for how a player should play optimally in the endgame. This is often referred to as ‘endgame technique’.</p>
+
+<p>So, we can categorize endgames based on the pieces involved, and calculate the average evaluation for each type of endgame to gain a better understanding of where my ‘endgame technique’ needs to improve. My classification of these endgames is based on piece value, so the endgame is defined by the highest value piece on the board. For example, if I have a King, Rook, Bishop it would be classified as a ‘Rook endgame’ whereas if I had a King, Rook, Queen it would be classified as a ‘Queen endgame’. This is a slight oversimplification, but it allows for easy separation of endgame categories, and in the endgame the most valuable piece does often play the most important role. Therefore, this does not seem to be an overly reductive representation of the different types of endgames.</p>
+
+<p><img src="/assets/images/chess/avg_eval_by_endgame.jpg" alt="Alt text for image" /></p>
+
+<p>First off, we should note that the average evaluation here is positive for all the different types of endgames which may seem a bit misleading as we know that I have lost more games than I have won out of the 1000 games I selected. However, keep in mind that a lot of wins occur when the opponent resigns before we reach the endgame which is why these values are skewed in the positive direction. Nonetheless, this chart is still illustrative in determining which endgames are stronger and which are weaker.</p>
+
+<p>We can see from this chart that the bishop and queen endgames are my strongest, and also that my knight endgame is the weakest. Pawn and rook endgames seem to be at more or less the same level.</p>
+
+<p>Therefore, to improve my endgame technique, the first port of call should be to study endgames involving a knight and pawns.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In conclusion, the analysis provided by these charts and data visualizations has given me valuable insights into my chess play style and performance across different phases of the game. From understanding the average evaluations in my most frequent openings to dissecting my endgame strategies, I now have a clearer picture of where my strengths lie and which areas require more focus and improvement.</p>
+
+<p>In the future I would like to be able to fit a machine learning model to my chess games data to understand more complex ideas/patterns about my style of play. For example, whether I am a more tactical or positional player, or whether I am more effective with bishops, knights or rooks etc. Also, doing an analysis of my time management in game and which parts of my game deteriorate under time pressure would be very illustrative for me and my development as a player.</p>
+
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#data-science" class="page__taxonomy-item p-category" rel="tag">Data Science</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-12-19T00:00:00-08:00">December 19, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=How+to+get+better+at+chess%3A+analyzing+1000+of+my+chess+games.%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fchess%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fchess%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fchess%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/data%20science/mars/" class="pagination--pager" title="Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/mars/" rel="permalink">Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzin...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/crime/" rel="permalink">Boosting, LASSO: Decision Trees and Advanced Regression Techniques on Crime data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">In this project, I delve into the realms of decision trees and advanced regression techniques, applying these methods to two distinct datasets: the Acute Inf...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/breast-cancer/" rel="permalink">Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This project embarks on an exploratory journey through different realms of machine learning: supervised, semi-supervised, and unsupervised learning, using th...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/MFCCs/" rel="permalink">Advanced Machine Learning: Multi-Class and Multi-Label Classification &amp; K-Means Clustering
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This project is a deep dive into advanced machine learning techniques using the Anuran Calls (MFCCs) Data Set. The focus is on multi-class and multi-label cl...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Joshua Payapulli. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

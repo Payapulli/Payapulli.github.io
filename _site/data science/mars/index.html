@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Identification of Frost in Martian HiRISE Images Using Machine Learning - Joshua Payapulli</title>
-<meta name="description" content="In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing various models including Convolutional Neural Networks (CNN) and transfer learning with pre-trained networks.">
+<!-- begin _includes/seo.html --><title>Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images - Joshua Payapulli</title>
+<meta name="description" content="In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing a Convolutional Neural Network + Multi-Layer Perceptron trained from scratch vs Transfer Learning with pre-trained networks (EfficientNetB0, ResNet50, and VGG16).">
 
 
   <meta name="author" content="Joshua Payapulli">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Joshua Payapulli">
-<meta property="og:title" content="Identification of Frost in Martian HiRISE Images Using Machine Learning">
+<meta property="og:title" content="Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images">
 <meta property="og:url" content="http://localhost:4000/data%20science/mars/">
 
 
-  <meta property="og:description" content="In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing various models including Convolutional Neural Networks (CNN) and transfer learning with pre-trained networks.">
+  <meta property="og:description" content="In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing a Convolutional Neural Network + Multi-Layer Perceptron trained from scratch vs Transfer Learning with pre-trained networks (EfficientNetB0, ResNet50, and VGG16).">
 
 
 
@@ -266,8 +266,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Identification of Frost in Martian HiRISE Images Using Machine Learning">
-    <meta itemprop="description" content="In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing various models including Convolutional Neural Networks (CNN) and transfer learning with pre-trained networks.">
+    <meta itemprop="headline" content="Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images">
+    <meta itemprop="description" content="In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing a Convolutional Neural Network + Multi-Layer Perceptron trained from scratch vs Transfer Learning with pre-trained networks (EfficientNetB0, ResNet50, and VGG16).">
     <meta itemprop="datePublished" content="2023-12-19T00:00:00-08:00">
     
 
@@ -275,7 +275,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/data%20science/mars/" class="u-url" itemprop="url">Identification of Frost in Martian HiRISE Images Using Machine Learning
+            <a href="http://localhost:4000/data%20science/mars/" class="u-url" itemprop="url">Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images
 </a>
           </h1>
           
@@ -292,7 +292,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -304,7 +304,7 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing various models including Convolutional Neural Networks (CNN) and transfer learning with pre-trained networks.</p>
+        <p>In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing a Convolutional Neural Network + Multi-Layer Perceptron trained from scratch vs Transfer Learning with pre-trained networks (EfficientNetB0, ResNet50, and VGG16).</p>
 
 <p><img src="/assets/images/mars-frost.jpeg" alt="Alt text for image" /></p>
 
@@ -313,20 +313,20 @@
 <h2 id="data-exploration-and-pre-processing">Data Exploration and Pre-processing</h2>
 <h3 id="dataset-overview">Dataset Overview</h3>
 <ul>
-  <li><strong>Data Retrieval</strong>: Downloading the Anuran Calls dataset, which consists of 214 subframes and a total of 119920 tiles, each labeled as ‘frost’ or ‘background.’</li>
+  <li><strong>Data Retrieval</strong>: Downloading the Martian HiRISE Images dataset, which consists of 214 subframes and a total of 119920 tiles, each labeled as ‘frost’ or ‘background.’</li>
 </ul>
 
 <h3 id="data-organization-and-preparation">Data Organization and Preparation</h3>
 <ul>
   <li><strong>Data Splitting</strong>: Utilizing provided files to divide the dataset into training, testing, and validation sets.</li>
-  <li><strong>Image Processing</strong>: Implementing image augmentation techniques like cropping, zooming, rotating, and translating to enhance the dataset’s diversity.</li>
+  <li><strong>Image Processing</strong>: Implementing an image augmentation pipeline to crop, zoom, rotate, and translate the images to make our model more robust to different orientations/scaling.</li>
 </ul>
 
 <h2 id="training-cnn--mlp">Training CNN + MLP</h2>
 <h3 id="model-architecture-and-training">Model Architecture and Training</h3>
 <ul>
   <li><strong>CNN Implementation</strong>: Building a three-layer CNN followed by a dense layer. Incorporating ReLU activations, softmax function, batch normalization, dropout (30%), L2 regularization, and ADAM optimizer.</li>
-  <li><strong>Training Process</strong>: Training the model for at least 20 epochs with early stopping based on validation set performance. Plotting training and validation errors vs. epochs.</li>
+  <li><strong>Training Process</strong>: Training the model for 20 epochs with early stopping based on validation set performance. Plotting training and validation errors vs. epochs.</li>
 </ul>
 
 <h3 id="model-evaluation">Model Evaluation</h3>
@@ -337,8 +337,8 @@
 <h2 id="transfer-learning-with-pre-trained-models">Transfer Learning with Pre-trained Models</h2>
 <h3 id="implementing-transfer-learning">Implementing Transfer Learning</h3>
 <ul>
-  <li><strong>Pre-trained Models</strong>: Using EfficientNetB0, ResNet50, and VGG16 as feature extractors. Training only the last fully connected layer while freezing earlier layers.</li>
-  <li><strong>Model Training</strong>: Repeating image augmentation processes and training each model for at least 10 (preferably 20) epochs. Implementing early stopping and plotting errors vs. epochs.</li>
+  <li><strong>Pre-trained Models</strong>: Using EfficientNetB0, ResNet50, and VGG16 as feature extractors. Training only the last fully connected layer and freezing the previous layers.</li>
+  <li><strong>Model Training</strong>: Repeating image augmentation processes and training each model for 10 epochs. Implementing early stopping and plotting errors vs. epochs.</li>
 </ul>
 
 <h3 id="model-evaluation-1">Model Evaluation</h3>
@@ -346,12 +346,16 @@
   <li><strong>Performance Metrics</strong>: Reporting Precision, Recall, and F1 score for each transfer learning model.</li>
 </ul>
 
-<h3 id="comparative-analysis">Comparative Analysis</h3>
-<ul>
-  <li><strong>Model Comparison</strong>: Comparing the results of the transfer learning models with the CNN + MLP model and providing explanations for observed performances.</li>
-</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>It is immediately apparent that this dataset is very challenging to learn from even for Pre-trained models such as ResNet50 that usually perform very well on image classification problems.</p>
 
-<p><a href="URL_to_your_GitHub_repository">View Project on GitHub</a></p>
+<p>The CNN + MLP model did not really seem to learn from the data as it has a training accuracy 0.57 and a test accuracy of 0.49. The Transfer Learning models (specifically the ResNet and VGG models) however are able to learn from the data but are likely overfitting. ResNet has a training accuracy of 0.78 and VGG has a training accuracy of 0.92, with a test accuracy of 0.55, 0.53 respectively.</p>
+
+<p>As such, we can say that the Transfer learning models (specifically ResNet and VGG) outperform the CNN + MLP model as they are at least able to learn from the data, despite definitely being overfit, they also have a slightly higher test accuracy. This makes sense as our test data (images of Mars) is probably very different to the data that these Transfer Learning models learned on, so these models are probably learning some pattern from these data that does not generalize well to new unseen data of this type (Martian terrain).</p>
+
+<p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb">View Jupyter Notebook</a> | 
+<a href="URL_to_your_GitHub_repository">View Project on GitHub</a> |
+<a href="https://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant">View Dataset</a></p>
 
         
       </section>
@@ -387,7 +391,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Identification+of+Frost+in+Martian+HiRISE+Images+Using+Machine+Learning%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fmars%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Transfer+Learning%2C+CNN+%2B+MLP%3A+Identification+of+Frost+in+Martian+HiRISE+Images%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fmars%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520science%2Fmars%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -402,7 +406,8 @@
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/data%20science/chess/" class="pagination--pager" title="How to get better at chess: analyzing 1000 of my chess games.
+">Next</a>
     
   </nav>
 
@@ -416,6 +421,45 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/chess/" rel="permalink">How to get better at chess: analyzing 1000 of my chess games.
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">How Can Analyzing a History of Personal Chess Games Reveal General Trends, Strengths, and Weaknesses in Gameplay? This project embarks on an in-depth analysi...</p>
+  </article>
+</div>
+
         
           
 
@@ -530,45 +574,6 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">This project is a deep dive into advanced machine learning techniques using the Anuran Calls (MFCCs) Data Set. The focus is on multi-class and multi-label cl...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/data%20science/AReM/" rel="permalink">Logistic Regression: Human Activity/Gesture detction on time series data
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">In this project, I explore the intricate task of classifying human activities based on time series data from the AReM dataset. This dataset, derived from a W...</p>
   </article>
 </div>
 
