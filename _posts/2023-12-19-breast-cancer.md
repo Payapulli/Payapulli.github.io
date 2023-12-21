@@ -1,5 +1,5 @@
 ---
-title: "Exploring Machine Learning: Supervised, Semi-Supervised, and Unsupervised Learning"
+title: "Supervised, Semi-Supervised, and Unsupervised Learning: Classification on Breast Cancer data"
 date: 2023-12-19
 categories:
   - Data Science
