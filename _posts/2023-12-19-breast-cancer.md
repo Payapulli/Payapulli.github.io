@@ -39,4 +39,6 @@ This project embarks on an exploratory journey through different realms of machi
 ### Monte Carlo Simulation and Analysis
 - **Simulation and Learning Curve**: Conducting a Monte Carlo simulation to average the test errors for both active and passive learning. Plotting the learning curve and drawing conclusions from the results.
 
-[View Project on GitHub](URL_to_your_GitHub_repository)
+[View Jupyter Notebook](https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/breast-cancer-SVM-KMeans.ipynb) | 
+[View Project on GitHub](URL_to_your_GitHub_repository) |
+[View Dataset](https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/breast-cancer-SVM-KMeans.ipynb)
