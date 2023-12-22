@@ -290,7 +290,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -337,11 +337,23 @@
   <li><strong>Model Comparison and Analysis</strong>: Evaluating the effectiveness and ease of implementation between L1-penalized and standard logistic regression.</li>
 </ul>
 
+<h2 id="results">Results</h2>
+
+<p>The L1 regularized model performs the best.</p>
+
+<p>It has the highest training accuracy of the three, and the testing accuracy is 1.0 across the board for all three as well. On top of this model is easier to implement than using variable selection with p values as it performs feature selection automatically, and runs the fastest out of the three.</p>
+
 <h3 id="multiclass-classification">Multiclass Classification</h3>
 <ul>
   <li><strong>L1-penalized Multinomial Regression</strong>: Implementing and testing an L1-penalized multinomial regression model for classifying all activities.</li>
   <li><strong>Naïve Bayes Classification</strong>: Comparing Gaussian and Multinomial Naïve Bayes classifiers for multiclass classification.</li>
 </ul>
+
+<h2 id="results-1">Results</h2>
+
+<p>The best performers are the L1 regularized and the Naive Bayes classifier with Gaussian priors, with two missclassifications as opposed to three from the Naive Bayes classifier with Multinomial priors.</p>
+
+<p>Based on the ROC curves on the testing data, the L1 penalized multinomial regression model performs the best for multi-class classification. This method also has the advantage of performing feature selection as part of the training process which helps in creating a less complex model that is less prone to overfitting.</p>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/AReM-logit-reg.ipynb">View Jupyter Notebook</a> | 
 <a href="https://github.com/DSCI-552/homework-4-Payapulli">View Project on GitHub</a> |
@@ -392,7 +404,7 @@
       
   <nav class="pagination">
     
-      <a href="/data%20science/APS/" class="pagination--pager" title="Random Forests, Boosting: Analyzing APS Failure Data
+      <a href="/data%20science/APS/" class="pagination--pager" title="Random Forests, Boosting: Analyzing APS Failure Data with Advanced Machine Learning
 ">Previous</a>
     
     
@@ -556,7 +568,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     

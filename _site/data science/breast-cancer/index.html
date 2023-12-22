@@ -290,7 +290,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -326,7 +326,7 @@
 
 <h3 id="unsupervised-learning-with-k-means">Unsupervised Learning with K-Means</h3>
 <ul>
-  <li><strong>Cluster Analysis</strong>: Running k-means clustering on the dataset, assuming k=2. Analyzing cluster centers and predicting labels based on majority polling. Computing average accuracy, precision, recall, F1-score, AUC, and reporting the ROC and confusion matrix for one of the runs.</li>
+  <li><strong>Cluster Analysis</strong>: Running k-means clustering on the dataset, assuming k=2. Analyzing cluster centers and predicting labels based on majority polling. Computing average accuracy, precision, recall, F1-score, AUC, and reporting the ROC and confusion matrix for the last run of the Monte-Carlo simulation.</li>
 </ul>
 
 <h3 id="spectral-clustering">Spectral Clustering</h3>
@@ -334,23 +334,33 @@
   <li><strong>Kernel-based Clustering</strong>: Implementing spectral clustering with an RBF kernel. Comparing the balance of clusters with the original dataset and using the fit-predict method for classification.</li>
 </ul>
 
-<h3 id="comparative-analysis">Comparative Analysis</h3>
-<ul>
-  <li><strong>Comparing Learning Approaches</strong>: Evaluating the performance differences between supervised, semi-supervised, and unsupervised learning methods.</li>
-</ul>
+<h3 id="results">Results</h3>
 
-<h2 id="part-2-active-learning-using-svms-on-banknote-authentication-data-set">Part 2: Active Learning Using SVMs on Banknote Authentication Data Set</h2>
+<p>The Semi-Supervised SVM performs the best on the test set, very closely followed by the Supervised SVM. The next best model is the K-Means model, which is to be expected as it doesn’t have the training labels to learn from as it is unsupervised. And finally, the worst performing model by quite a large margin is the Spectral Clustering model, which is also unsupervised.</p>
+
+<p>In summary:</p>
+
+<p>Semi-Supervised SVM
+Supervised SVM
+Unsupervised K Means
+Unsupervised Spectral Clustering</p>
+
+<h2 id="part-2-passive-vs-active-learning-using-svms-on-banknote-authentication-data-set">Part 2: Passive vs Active Learning Using SVMs on Banknote Authentication Data Set</h2>
 <h3 id="data-preparation-and-active-learning-simulation">Data Preparation and Active Learning Simulation</h3>
 <ul>
   <li><strong>Dataset Splitting</strong>: Randomly selecting a test and training set.</li>
   <li><strong>Passive Learning</strong>: Implementing passive learning by incrementally increasing the training set.</li>
-  <li><strong>Active Learning</strong>: Employing active learning by selectively adding data points closest to the SVM hyperplane.</li>
+  <li><strong>Active Learning</strong>: Employing active learning by selectively adding data points closest to the SVM hyperplane, these are the ones for which we have most uncertainty.</li>
 </ul>
 
 <h3 id="monte-carlo-simulation-and-analysis">Monte Carlo Simulation and Analysis</h3>
 <ul>
   <li><strong>Simulation and Learning Curve</strong>: Conducting a Monte Carlo simulation to average the test errors for both active and passive learning. Plotting the learning curve and drawing conclusions from the results.</li>
 </ul>
+
+<h3 id="results-1">Results</h3>
+
+<p>As is expected, the passive and active learning methods both converge to having similar performance on the test set after seeing enough training instances with the active learning model reaching this plateau in performance faster than the passive learning model.</p>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/breast-cancer-SVM-KMeans.ipynb">View Jupyter Notebook</a> | 
 <a href="https://github.com/DSCI-552/homework-8-Payapulli">View Project on GitHub</a> |
@@ -565,7 +575,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     

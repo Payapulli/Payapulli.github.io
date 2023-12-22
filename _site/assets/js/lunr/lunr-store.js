@@ -11,7 +11,7 @@ var store = [{
         "url": "/data%20science/vertebral/",
         "teaser": null
       },{
-        "title": "Random Forests, Boosting: Analyzing APS Failure Data",
+        "title": "Random Forests, Boosting: Analyzing APS Failure Data with Advanced Machine Learning ",
         "excerpt":"This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances. Data Preparation and Exploration Dataset Acquisition...","categories": ["Data Science"],
         "tags": [],
         "url": "/data%20science/APS/",

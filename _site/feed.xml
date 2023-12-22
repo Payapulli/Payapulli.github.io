@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-21T08:53:57-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html">Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images</title><link href="http://localhost:4000/data%20science/mars/" rel="alternate" type="text/html" title="Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/mars</id><content type="html" xml:base="http://localhost:4000/data%20science/mars/"><![CDATA[<p>In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing a Convolutional Neural Network + Multi-Layer Perceptron trained from scratch vs Transfer Learning with pre-trained networks (EfficientNetB0, ResNet50, and VGG16).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-22T08:27:51-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Joshua Payapulli</title><subtitle>Portfolio</subtitle><author><name>Joshua Payapulli</name></author><entry><title type="html">Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images</title><link href="http://localhost:4000/data%20science/mars/" rel="alternate" type="text/html" title="Transfer Learning, CNN + MLP: Identification of Frost in Martian HiRISE Images" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/mars</id><content type="html" xml:base="http://localhost:4000/data%20science/mars/"><![CDATA[<p>In this project, I tackle the challenge of identifying frost in Martian terrain images using advanced machine learning techniques. The task involves analyzing a unique dataset of Martian terrain images, implementing and comparing a Convolutional Neural Network + Multi-Layer Perceptron trained from scratch vs Transfer Learning with pre-trained networks (EfficientNetB0, ResNet50, and VGG16).</p>
 
 <p><img src="/assets/images/mars-frost.jpeg" alt="Alt text for image" /></p>
 
@@ -85,6 +85,17 @@
   <li><strong>Multi-Label Metrics Analysis</strong>: Researching and computing confusion matrices, precision, recall, ROC, and AUC for the trained classifiers.</li>
 </ul>
 
+<h3 id="results">Results</h3>
+<p>The original SVM model with no L1 penalty and no SMOTE resampling performs the best, even in terms of recall which we can typically expect SMOTE to improve for imbalanced datasets.</p>
+
+<p>Between the L1 Penalty model and the L1 Penalty with SMOTE model it is less clear. The L1 penalty model performs better in terms of exact match, hamming score and precision but if we are particularly interested in reducing False Negatives (Recall) and F1 score then we might choose the SMOTE model instead.</p>
+
+<p>However, assuming that we are not especially interested in recall/F1 then I will rank the models as below:</p>
+
+<p>SVM
+L1 Penalty
+SMOTE</p>
+
 <h2 id="part-2-k-means-clustering-on-a-multi-class-and-multi-label-data-set">Part 2: K-Means Clustering on a Multi-Class and Multi-Label Data Set</h2>
 <h3 id="monte-carlo-simulation">Monte-Carlo Simulation</h3>
 <ul>
@@ -98,9 +109,12 @@
   <li><strong>Distance Calculation</strong>: Computing the average Hamming distance, score, and loss between true labels and cluster-assigned labels, reporting the average and standard deviation of these metrics across 50 simulations.</li>
 </ul>
 
+<h3 id="results-1">Results</h3>
+<p>In the unsupervised setting, the K-means clustering model performs reasonably well on this multi-label, multi-classification problem with a hamming loss of 0.217.</p>
+
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/MFCC-SVM-KMeans.ipynb">View Jupyter Notebook</a> | 
 <a href="https://github.com/DSCI-552/homework-7-Payapulli">View Project on GitHub</a> |
-<a href="https://archive.ics.uci.edu/ml/datasets/Anuran+Calls+%28MFCCs%29">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project is a deep dive into advanced machine learning techniques using the Anuran Calls (MFCCs) Data Set. The focus is on multi-class and multi-label classification using Support Vector Machines (SVMs) and exploring K-Means clustering for a multi-class, multi-label dataset.]]></summary></entry><entry><title type="html">Random Forests, Boosting: Analyzing APS Failure Data</title><link href="http://localhost:4000/data%20science/APS/" rel="alternate" type="text/html" title="Random Forests, Boosting: Analyzing APS Failure Data" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/APS</id><content type="html" xml:base="http://localhost:4000/data%20science/APS/"><![CDATA[<p>This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.</p>
+<a href="https://archive.ics.uci.edu/ml/datasets/Anuran+Calls+%28MFCCs%29">View Dataset</a></p>]]></content><author><name>Joshua Payapulli</name></author><category term="Data Science" /><summary type="html"><![CDATA[This project is a deep dive into advanced machine learning techniques using the Anuran Calls (MFCCs) Data Set. The focus is on multi-class and multi-label classification using Support Vector Machines (SVMs) and exploring K-Means clustering for a multi-class, multi-label dataset.]]></summary></entry><entry><title type="html">Random Forests, Boosting: Analyzing APS Failure Data with Advanced Machine Learning</title><link href="http://localhost:4000/data%20science/APS/" rel="alternate" type="text/html" title="Random Forests, Boosting: Analyzing APS Failure Data with Advanced Machine Learning" /><published>2023-12-19T00:00:00-08:00</published><updated>2023-12-19T00:00:00-08:00</updated><id>http://localhost:4000/data%20science/APS</id><content type="html" xml:base="http://localhost:4000/data%20science/APS/"><![CDATA[<p>This project revolves around the analysis of the APS Failure dataset from Scania Trucks, focusing on implementing tree-based methods for classification. The dataset, rich in attributes and challenges, offers an excellent opportunity to delve into techniques like Random Forest, XGBoost, and addressing class imbalances.</p>
 
 <p><img src="/assets/images/scania-trucks.jpeg" alt="Alt text for image" /></p>
 
@@ -134,9 +148,15 @@
 
 <h3 id="addressing-class-imbalance">Addressing Class Imbalance</h3>
 <ul>
-  <li><strong>Research on Imbalance Handling</strong>: Investigating how class imbalance is managed in random forests.</li>
+  <li><strong>Imbalance Handling</strong>: Applying Synthetic Minority Over-sampling Technique (SMOTE) to address class imbalance.</li>
   <li><strong>Imbalance Compensation</strong>: Re-training the random forest with class imbalance compensation and comparing the results to the initial model.</li>
 </ul>
+
+<h3 id="results">Results</h3>
+
+<p>The test error and training error goes up when we compensate for class imbalance which is to be expected, the nature of the data we are making predictions on is heavily imbalanced in favor of the negative class so when we deliberately force our model to balance its weights more towards the positive class the training and test error will naturally increase (especially the training error).</p>
+
+<p>However, the advantage here is that our model has become much better at classifying the positive samples where it is now correctly classifying 363 (12 missclassifications) of the positive samples whereas before it was only able correctly classify 268 (missclassifying 107) of the positive samples. This comes at a cost to its ability to classify the negative samples however, which leads to our overall test error increasing. But if we are particularly interested in our ability to classify positive samples then this can be considered beneficial.</p>
 
 <h2 id="advanced-tree-based-techniques">Advanced Tree-Based Techniques</h2>
 <h3 id="xgboost-and-model-trees">XGBoost and Model Trees</h3>
@@ -151,6 +171,10 @@
   <li><strong>SMOTE Preprocessing</strong>: Applying Synthetic Minority Over-sampling Technique (SMOTE) to address class imbalance.</li>
   <li><strong>Model Re-training</strong>: Training the XGBoost model with L1-penalized logistic regression on the pre-processed data and repeating the error estimation and comparison.</li>
 </ul>
+
+<h3 id="results-1">Results</h3>
+
+<p>Similar to part d, using SMOTE on our XGBoost model increases our overall training and testing error (making the model worse in terms of overall performance). However, we can see from our confusion matrices that the model becomes better at classifying positive samples, at the cost of reduced accuracy on the negative samples which leads to the increased training/test error.</p>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/aps-random-forest.ipynb">View Jupyter Notebook</a> | 
 <a href="https://github.com/DSCI-552/homework-6-Payapulli">View Project on GitHub</a> |
@@ -189,11 +213,23 @@
   <li><strong>Model Comparison and Analysis</strong>: Evaluating the effectiveness and ease of implementation between L1-penalized and standard logistic regression.</li>
 </ul>
 
+<h2 id="results">Results</h2>
+
+<p>The L1 regularized model performs the best.</p>
+
+<p>It has the highest training accuracy of the three, and the testing accuracy is 1.0 across the board for all three as well. On top of this model is easier to implement than using variable selection with p values as it performs feature selection automatically, and runs the fastest out of the three.</p>
+
 <h3 id="multiclass-classification">Multiclass Classification</h3>
 <ul>
   <li><strong>L1-penalized Multinomial Regression</strong>: Implementing and testing an L1-penalized multinomial regression model for classifying all activities.</li>
   <li><strong>Naïve Bayes Classification</strong>: Comparing Gaussian and Multinomial Naïve Bayes classifiers for multiclass classification.</li>
 </ul>
+
+<h2 id="results-1">Results</h2>
+
+<p>The best performers are the L1 regularized and the Naive Bayes classifier with Gaussian priors, with two missclassifications as opposed to three from the Naive Bayes classifier with Multinomial priors.</p>
+
+<p>Based on the ROC curves on the testing data, the L1 penalized multinomial regression model performs the best for multi-class classification. This method also has the advantage of performing feature selection as part of the training process which helps in creating a less complex model that is less prone to overfitting.</p>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/AReM-logit-reg.ipynb">View Jupyter Notebook</a> | 
 <a href="https://github.com/DSCI-552/homework-4-Payapulli">View Project on GitHub</a> |
@@ -336,7 +372,7 @@ heatmap validates my focus on these central squares and supports the fundamental
 
 <h3 id="unsupervised-learning-with-k-means">Unsupervised Learning with K-Means</h3>
 <ul>
-  <li><strong>Cluster Analysis</strong>: Running k-means clustering on the dataset, assuming k=2. Analyzing cluster centers and predicting labels based on majority polling. Computing average accuracy, precision, recall, F1-score, AUC, and reporting the ROC and confusion matrix for one of the runs.</li>
+  <li><strong>Cluster Analysis</strong>: Running k-means clustering on the dataset, assuming k=2. Analyzing cluster centers and predicting labels based on majority polling. Computing average accuracy, precision, recall, F1-score, AUC, and reporting the ROC and confusion matrix for the last run of the Monte-Carlo simulation.</li>
 </ul>
 
 <h3 id="spectral-clustering">Spectral Clustering</h3>
@@ -344,23 +380,33 @@ heatmap validates my focus on these central squares and supports the fundamental
   <li><strong>Kernel-based Clustering</strong>: Implementing spectral clustering with an RBF kernel. Comparing the balance of clusters with the original dataset and using the fit-predict method for classification.</li>
 </ul>
 
-<h3 id="comparative-analysis">Comparative Analysis</h3>
-<ul>
-  <li><strong>Comparing Learning Approaches</strong>: Evaluating the performance differences between supervised, semi-supervised, and unsupervised learning methods.</li>
-</ul>
+<h3 id="results">Results</h3>
 
-<h2 id="part-2-active-learning-using-svms-on-banknote-authentication-data-set">Part 2: Active Learning Using SVMs on Banknote Authentication Data Set</h2>
+<p>The Semi-Supervised SVM performs the best on the test set, very closely followed by the Supervised SVM. The next best model is the K-Means model, which is to be expected as it doesn’t have the training labels to learn from as it is unsupervised. And finally, the worst performing model by quite a large margin is the Spectral Clustering model, which is also unsupervised.</p>
+
+<p>In summary:</p>
+
+<p>Semi-Supervised SVM
+Supervised SVM
+Unsupervised K Means
+Unsupervised Spectral Clustering</p>
+
+<h2 id="part-2-passive-vs-active-learning-using-svms-on-banknote-authentication-data-set">Part 2: Passive vs Active Learning Using SVMs on Banknote Authentication Data Set</h2>
 <h3 id="data-preparation-and-active-learning-simulation">Data Preparation and Active Learning Simulation</h3>
 <ul>
   <li><strong>Dataset Splitting</strong>: Randomly selecting a test and training set.</li>
   <li><strong>Passive Learning</strong>: Implementing passive learning by incrementally increasing the training set.</li>
-  <li><strong>Active Learning</strong>: Employing active learning by selectively adding data points closest to the SVM hyperplane.</li>
+  <li><strong>Active Learning</strong>: Employing active learning by selectively adding data points closest to the SVM hyperplane, these are the ones for which we have most uncertainty.</li>
 </ul>
 
 <h3 id="monte-carlo-simulation-and-analysis">Monte Carlo Simulation and Analysis</h3>
 <ul>
   <li><strong>Simulation and Learning Curve</strong>: Conducting a Monte Carlo simulation to average the test errors for both active and passive learning. Plotting the learning curve and drawing conclusions from the results.</li>
 </ul>
+
+<h3 id="results-1">Results</h3>
+
+<p>As is expected, the passive and active learning methods both converge to having similar performance on the test set after seeing enough training instances with the active learning model reaching this plateau in performance faster than the passive learning model.</p>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/breast-cancer-SVM-KMeans.ipynb">View Jupyter Notebook</a> | 
 <a href="https://github.com/DSCI-552/homework-8-Payapulli">View Project on GitHub</a> |
@@ -388,7 +434,7 @@ heatmap validates my focus on these central squares and supports the fundamental
 <ul>
   <li><strong>Data Retrieval</strong>: Downloading the Communities and Crime dataset.</li>
   <li><strong>Data Preparation</strong>: Handling missing values and disregarding nonpredictive features.</li>
-  <li><strong>Correlation Matrix</strong>: Creating a correlation matrix to understand feature relationships.</li>
+  <li><strong>Data Exploration</strong>: Creating a correlation matrix to understand feature relationships.</li>
   <li><strong>Coefficient of Variation Calculation</strong>: Computing the Coefficient of Variation (CV) for each feature.</li>
 </ul>
 
@@ -410,6 +456,9 @@ heatmap validates my focus on these central squares and supports the fundamental
 <ul>
   <li><strong>L1 Penalized Gradient Boosting Tree</strong>: Utilizing XGBoost to fit an L1 penalized gradient boosting tree, determining α through cross-validation.</li>
 </ul>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>All of our models have a similar performance at around 0.017-0.018 test error with our Ridge Regression model coming out as the slight favorite with a test error of 0.017732.</p>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/crime-lasso-boosting.ipynb">View Jupyter Notebook</a> |
 <a href="https://github.com/DSCI-552/homework-5-Payapulli">View Project on GitHub</a> |
@@ -445,8 +494,20 @@ heatmap validates my focus on these central squares and supports the fundamental
 <h2 id="knn-regression">KNN Regression</h2>
 <p>The project also includes KNN regression analysis, comparing both normalized and raw features to determine the best fit. The analysis of train and test errors provides valuable insights into the model’s performance.</p>
 
-<h2 id="comparative-study-and-conclusions">Comparative Study and Conclusions</h2>
-<p>The project concludes with a comparison between KNN Regression and the most effective linear regression model. This comparative analysis provides a deep understanding of different modeling approaches in predicting energy output in power plants.</p>
+<h2 id="conclusions">Conclusions</h2>
+
+<p>My linear regression with quadratic and interaction terms (and statistically insignificant terms dropped) is my best performing linear regressor. This has a test MSE of 17.8. Both my raw and normalized KNN regressors outperform this, with MSE’s of 15.9 and 14.0 respectively.</p>
+
+<p>So clearly, KNN Regression outperforms Linear Regression for this dataset. I believe this is due to the following reasons:</p>
+
+<ul>
+  <li><strong>Nonlinearity</strong>: There is some degree of nonlinearity in the data. This is made clear by fact that the complex model performs better than the basic model, as it includes quadratic terms which have p-values that are effectively at zero. Whilst this is an improvement on the basic model, it is entirely possible that there are even more complex, nonlinear patterns within the data that these quadratic terms are not able to capture. Evidence to support this idea is found in part (f), where we found that the introduction of cubic terms for some of the predictors was statistically significant. The KNN Regression model is naturally better suited to capture such nonlinearity.</li>
+  <li><strong>Interaction</strong>: On a similar note we saw in part (g) that some of the predictors in our dataset have statistically significant interactions. And while these pairwise interactions were included in the complex model which improved its MSE, there may also be higher order interactions that are not captured. Such interactions are captured inherently by the KNN model as it measure the multi-dimensional distance across these features.</li>
+  <li><strong>Noise</strong>: From our analysis in part (c), there is not a lot of noise in the data. Only a very small amount of points have been flagged as “outliers” in my influence plot, and these data points have been removed from the dataset as well. I believe this bodes well for the KNN, as it allows it essentially increases its performance for smaller values of k which allows it to be more precise (at the risk of overfitting). Our value of k, that minimizes the test error is 5, which supports this theory.</li>
+  <li><strong>Assumptions</strong>: Linear Regression makes further assumptions about the data such as constant variance of errors, independence of error, and that errors are normally distributed. It may be true that such assumptions do not hold for this dataset which causes the KNN Regressor to outperform it.</li>
+</ul>
+
+<p>It is important to note that the difference in MSE for the KNN Regression and Linear Regression is not massive, and the Linear Regression model does come with advantages such as better interpretability and scales better with added features.</p>
 
 <p><a href="https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/CCPP-lin-reg.ipynb">View Jupyter Notebook</a> | 
 <a href="https://github.com/DSCI-552/homework-2-Payapulli">View Project on GitHub</a> |
