@@ -51,6 +51,5 @@ Unsupervised Spectral Clustering
 
 As is expected, the passive and active learning methods both converge to having similar performance on the test set after seeing enough training instances with the active learning model reaching this plateau in performance faster than the passive learning model.
 
-[View Jupyter Notebook](https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/breast-cancer-SVM-KMeans.ipynb) | 
 [View Project on GitHub](https://github.com/Payapulli/breast-cancer-classification) |
 [View Dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
