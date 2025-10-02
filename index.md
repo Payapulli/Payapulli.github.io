@@ -9,20 +9,20 @@ Hey! I'm Joshua Payapulli, a Data Science graduate from USC with a Bachelor's in
 
 ## 💻 Tech Stack
 
-### 🐍 Programming Languages
-**Python** • **R** • **SQL** • **JavaScript/TypeScript** • **Java** • **React/React Native**
+### Programming Languages
+Python • R • SQL • JavaScript/TypeScript • Java • React/React Native
 
-### 🤖 AI & Machine Learning
-**TensorFlow** • **PyTorch** • **Scikit-learn** • **Pandas** • **NumPy**
+### AI & Machine Learning
+TensorFlow • PyTorch • Scikit-learn • Pandas • NumPy
 
 ### 🧠 AI Engineering
-**RAG** • **LangChain** • **Hugging Face Transformers** • **Vector Databases** (Pinecone, Weaviate) • **MLOps** (MLflow, Kubeflow)
+RAG • LangChain • Hugging Face Transformers • Vector Databases (Pinecone, Weaviate) • MLOps (MLflow, Kubeflow)
 
 ### 🗄️ Data & Databases
-**PostgreSQL** • **MongoDB** • **Apache Spark** • **Hadoop**
+PostgreSQL • MongoDB • Apache Spark • Hadoop
 
 ### ☁️ Cloud & Infrastructure
-**AWS** • **Google Cloud Platform** • **Docker** • **Kubernetes** • **Terraform**
+AWS • Google Cloud Platform • Docker • Kubernetes • Terraform
 
 ### 🛠️ Tools & Platforms
-**Git** • **Jupyter** • **Tableau** • **Power BI** • **Linux**
+Git • Jupyter • Tableau • Power BI • Linux
