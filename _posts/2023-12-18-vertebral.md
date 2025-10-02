@@ -29,5 +29,5 @@ Further exploration includes:
 We can see from our test errors using various distance metrics that the KNN model performs well on this dataset with a test error rate averaging at around 0.1.
 
 [View Jupyter Notebook](https://nbviewer.org/github/Payapulli/Payapulli.github.io/blob/main/jupyter-notebooks/Vertebral-Column-Datset-KNN.ipynb) |
-[View Project on GitHub](https://github.com/DSCI-552/homework-1-Payapulli) |
+[View Project on GitHub](https://github.com/Payapulli/vertebral-column-classification) |
 [View Dataset](https://archive.ics.uci.edu/dataset/212/vertebral+column)
