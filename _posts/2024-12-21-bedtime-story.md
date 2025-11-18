@@ -7,6 +7,8 @@ categories:
 
 A multi-agent AI system that generates age-appropriate bedtime stories for children ages 5-10, featuring adaptive reading levels, content safety filtering, and iterative quality refinement.
 
+![AI Bedtime Story Generator Architecture](/assets/images/block-diagram.png)
+
 <!--more-->
 
 ## Overview
