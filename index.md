@@ -15,14 +15,14 @@ Python • R • SQL • JavaScript/TypeScript • Java • React/React Native
 ### AI & Machine Learning
 TensorFlow • PyTorch • Scikit-learn • Pandas • NumPy
 
-### 🧠 AI Engineering
+### AI Engineering
 RAG • LangChain • Hugging Face Transformers • Vector Databases (Pinecone, Weaviate) • MLOps (MLflow, Kubeflow)
 
-### 🗄️ Data & Databases
+### Data & Databases
 PostgreSQL • MongoDB • Apache Spark • Hadoop
 
-### ☁️ Cloud & Infrastructure
+### Cloud & Infrastructure
 AWS • Google Cloud Platform • Docker • Kubernetes • Terraform
 
-### 🛠️ Tools & Platforms
+### Tools & Platforms
 Git • Jupyter • Tableau • Power BI • Linux
